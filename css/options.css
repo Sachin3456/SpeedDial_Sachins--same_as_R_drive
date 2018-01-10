@@ -1,0 +1,315 @@
+	body {width: 900px; margin: 10px 0 0 230px; font: 18px Calibri; background-color: beige; 
+				border: 1px solid hsl(236, 58%, 45%);  }
+
+	textarea_cancelled { background-color: hsl(21, 41%, 96%); /* width: 3em; */ /* height: 1em; */ padding-left: 3px;
+						 font: 18px Calibri; letter-spacing: 0.02em;
+						 /* resize: none; */ /* overflow: hidden; */ /* outline-color: rgb(200,200,200); */
+						 /* color: rgb(60,60,60); */ /* text-shadow: 0 1px 0 rgb(245,245,245); */
+						 /* margin: 0px 0 0 3px; */ vertical-align: -4px; }
+	.fol_Name	{ width: 35em; font: bold 19px Calibri; margin: 0 0 0 -2px; color: brown; }
+	#saved,#saved_1 { display: none; font: bold 22px Calibri; color: seaGreen;
+										text-shadow: 0 0 1px Yellow; }
+	.btn_Save { font: bold 18px Calibri; padding: 0px 10px; }
+
+
+	#textarea_1,#textarea_2 { max-height:22px;  margin: 0 0 7px 0; font: 15px Calibri; }
+
+div#options_container_1 {
+    border: 2px solid orange;
+    padding: 15px 10px;
+}
+
+input[type="checkbox"] { width: 16px; height: 16px; vertical-align: 3px;  }
+
+#show__Categories_not_found__in_popup {
+    width: 22px; 
+    height: 22px;
+}
+label[for="show__Categories_not_found__in_popup"] {
+    font: bold 22px Calibri;
+    vertical-align: 7px;
+    margin: 0 0 0 2px;
+    color: rgb(0,0,180);
+    text-shadow: 0 0 3px yellow;
+}
+#div14_A_1 span {
+    background-color: rgba(255, 192, 203, 0.2);
+    padding: 3px 8px;
+    border: 1px solid rgba(255, 165, 0, 0.1);
+    border-radius: 4px;
+}
+
+
+
+#div14_A_1 {
+    margin: 10px 0 12px 20px;
+}
+
+
+div#options_container_2 {
+    border: 2px solid orange;      padding: 15px 10px;
+    margin: 60px 0 0 0;
+}
+
+textarea {
+	background-color: hsl(21, 41%, 96%);
+	font: 18px Calibri;
+}
+
+div#div13 {
+    -webkit-column-count: 2;
+}
+
+h4.h4_Cat_GroupName {
+    position: relative;
+    margin: 0px 0 2px 0px;
+    background-color: hsl(0, 0%, 94%);
+    padding: 3px 0 3px 13px;
+    /* width: 330px; */
+    box-shadow: 0 0 2px orange;
+    border-radius: 4px;
+}
+
+span.ar_len__No_of_items {
+    position: absolute;
+    right: 20px;
+    color: hsl(236, 58%, 40%);
+    /* margin: 0 0 0 30px; */
+}
+
+
+
+#h4_in_div15__1 span {
+    margin: 0 0 0 90px;
+    background-color: rgba(0, 240, 0, 0.3);
+    padding: 1px 6px;
+    border-radius: 2px;
+}
+
+h4#h4_in_div15__1 {
+    box-shadow: 0 0 8px blue;
+    margin: 5px 0 13px 90px;
+    width: 380px;
+}
+
+.containing_div {
+    position: relative;
+    float: left;
+    margin: 3px 10px 0 5px;
+    border: 1px solid gold;
+    border-radius: 4px;
+    width: 330px;
+    padding: 0px 20px;
+}
+
+div#div15_2_float_clr {
+    clear: both;
+}
+
+div#div15 {
+    position: relative;
+    margin: 0 0 30px 80px;
+    /* border: 1px solid blue; */
+}
+
+span#div14_1 {
+    font: bold 24px Calibri;
+    background-color: rgba(0, 240, 0, 0.3);
+    padding: 2px 10px;
+    border-radius: 4px;
+    margin: 0 0 0 10px;
+}
+
+button#how_many_checked_btn14 {
+	/* this btn closed on 8Feb17, when chkbox problem get solved.
+	the explaination is in options.js  */
+	display: none;
+}
+
+button#Save_Active_Groups {
+    font: bold 26px Calibri;
+    padding: 1px 11px;
+    position: absolute;
+    top: 0px;
+    right: 50px;
+}
+
+button#delete_Group {
+    position: absolute;      
+    top: 60px;      
+    right: 50px;
+}
+
+.chkbox_delete_Groups {
+    position: absolute;
+    top: 35px;
+    left: 240px;
+    color: blue;
+    width: 28px;
+    height: 28px;
+    /* width & height did not work from here .class, as line22 of this css--file
+    contains rule for  input[type="checkbox"] as width & height 16px, which over-rules 
+    this-here 28px. So, used javascript for inline css as 28px.
+    */
+}
+
+button#delete_Groups___checked_ones {
+    position: absolute;      
+    top: 87px;      
+    right: 15px;
+}
+
+div#div15_3_deleted__Reload {
+    position: absolute;
+    top: 109px;
+    right: -100px;
+    font: bold 28px Calibri;
+    text-shadow: 0 0 4pc Navy;
+    z-index: 3;
+}
+
+div#div14_2 {
+    display: none;
+    position: absolute;
+    top: -63px;
+    right: 151px;
+    font: bold 26px Calibri;
+    text-shadow: -1px 0px 4pc orangered;
+    box-shadow: 0 0 6pc blueviolet;
+    padding: 5px 26px;
+    border-radius: 15px;
+}
+
+div#div15_3_deleted__Reload {
+    display: none;
+}
+
+div#div14 {
+    position: relative;
+}
+
+div#Saved_Active_Groups_msg_show__div15_4 {
+    font: bold 22px Calibri;
+    color: Tomato;
+    text-shadow: 0 0 3px Yellow;
+    position: absolute;
+    top: 37px;
+    right: 151px;
+    display: none;
+}
+
+#All_Active_Categories_count span {
+    margin: 0 0 0 26px;
+    background-color: rgba(0, 240, 0, 0.3);      
+    padding: 3px 17px;      border-radius: 2px;
+    border: 2px dotted blue;
+}
+
+h4#All_Active_Categories_count {
+    font: bold 20px Calibri;
+    box-shadow: 0 0 8px blue;
+    width: 370px;
+}
+
+ul#ul_CategoryNames_options_page {
+    width: 290px;      
+    height: 319px;      
+    border: 1px solid gray;      
+    box-shadow: 0 0 1px;      
+    margin: 2px 0;      
+    padding: 0 0 0 0px;      
+    list-style-type: none;      
+    overflow-y: scroll;      
+    /* overflow-x: hidden; */;
+}
+
+.myListClass_1 { background: #f2f2f2; 
+    border-bottom: 1px dotted Orange; 
+    padding: 0 0 0 2px; 
+}
+
+.ui_list_placeholder { height: 1.6em; line-height: 1.2em;
+  background-color: gold; border: 2px solid red; 
+  / * border-bottom: 2px red; */ }
+
+.selected { background-color: rgba(218, 165, 32, 0.9); /* bg color was goldenrod  */
+            color: white; 
+          /* text-shadow: 0 0 1px blue; */ 
+          /* font-weight: bold; */
+}
+
+textarea#ul_CategoryNames_Sortable_update {
+    position: absolute;
+    top: 30px;
+    right: 0px;
+    width: 350px;
+    height: 6em;
+}
+
+div#div16 {
+    position: relative;
+}
+
+button#Save_ul_li {
+    position: absolute;
+    top: 190px;
+    right: 200px;
+    padding: 2px 13px;
+    font: bold 24px Calibri;
+}
+
+div#div16_ul_Saved {
+    font: bold 22px Calibri;      color: Tomato;      text-shadow: 0 0 3px Yellow;      position: absolute;      
+    top: 262px;      
+    right: 154px;
+    display: none;
+}
+
+button#Save_Backup_lStorage_thru_ta {
+    font: bold 23px Calibri;
+}
+
+span.span__serial_No_in__Category_GroupNames_arr {
+    margin: 0 0 0 10px;
+    color: orangered;
+    background-color: rgba(0, 240, 0, 0.2);   /* rgba(255, 232, 205, 0.9);   This is near bisque with 0.8 opacity */
+    padding: 2px 6px;
+    border-radius: 4px;
+}
+
+.Active_Groups {
+    position: absolute;
+    top: 5px;  /* -4px when it was touching the corner(upper--border) */
+    left: -5px;
+    width: 20px;
+    height: 20px;
+}
+
+
+
+/*  css for textarea--appended for lStorage Backup   , 23July16  
+    for file:  'Backup_lStorage_thru_textarea.js'                 */
+
+textarea#textarea_appended_for_lStorage_Backup {
+    position: relative;
+    left: -110px;
+    margin: 25px 0 0 0;
+    border: 2px solid red; 
+    box-shadow: 0 0 10px Orange;
+    font: 16px Calibri; 
+    z-index: 20;
+    padding: 3px 10px; 
+    /* background-color: rgba(255, 255, 0, 0.1); */
+    /* width: auto; */ 
+    /* height: auto; */ 
+    resize: auto;
+}                
+
+span#div17_Done_msg {
+    margin: 0 0 0 13px;
+    font: bold 20px Calibri;
+    color: #a58250;
+    background-color: rgba(144, 238, 144, 0.4);
+    padding: 4px 13px;
+    border-radius: 3px;
+}

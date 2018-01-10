@@ -1,0 +1,111 @@
+/* css for sac_tooltip starts here */
+
+/*
+started using in tabs_execute here, on 25Aug17
+    .sac_tooltip, class-based (shows thru JS also) (add-thru-span or div) (23Aug17)
+    https://codepen.io/sahni4you/pen/ZJRBQN
+*/
+
+
+.tooltip_el {
+    /* pos--relative is added to el, to which tooltip needs to be added-to. 
+    this is required, for absolute--positioning of div.mytooltip   */
+    position: relative;
+    /* display: inline-block; */
+}    
+
+.tooltip_el .sac_tooltip {
+/* .mytooltip { */
+    position: absolute;
+    /* note, .sac_tooltip works good without width, but it shows, very less width at start,
+    So, some good-ok width to start-with, I have kept, which can be changed using, config class */
+    width: 100px;  /* min-width: 120px; also works the same */
+    background-color: black;
+    padding: 4px 7px;
+    color: yellow;
+    font: 14px Verdana;
+    text-align: center;
+    line-height: 1.4;
+    /* word-spacing: 0.6px; */
+    /* letter-spacing: 0.1px; */
+    border-radius: 4px;
+    z-index: 50;
+    visibility: hidden;
+}
+
+.tooltip_el:hover .sac_tooltip {
+    visibility: visible;
+}    
+
+/* Dynamic horizontal centering */
+.show_up_at_bottom, .show_up_at_top {
+    left: 50%;
+    /* margin-left: -60px;  transform does not require this  */
+    transform: translateX(-50%);
+}
+.show_up_at_bottom {
+    top: 103%;  /* 100% is ok, but 105% works good in most of the cases, as it adjusts padding of the el, on which sac_tooltip is Added */
+    margin-top: 8px; 
+}
+.show_up_at_top {
+    bottom: 103%;    /* approx. */
+    margin-bottom: 8px;
+}
+
+/* Dynamic vertical centering */
+.show_up_at_left, .show_up_at_right {
+    top: 50%;
+    /* margin-left: -60px;  transform does not require this  */
+    transform: translateY(-50%);
+}
+.show_up_at_left {
+    right: 102%;
+    margin-right: 8px;
+}
+.show_up_at_right {
+    left: 102%;
+    margin-left: 8px;
+}
+
+
+/* the below is for arrow, this will remain fix.
+Consider, as if you are using a css-lib, which cannot be changed  */
+.tooltip_el .sac_tooltip::after {
+    content: "";
+    position: absolute;
+    border-width: 8px;
+    border-style: solid;
+}    
+.tooltip_el .sac_tooltip.arrow_top::after {
+    bottom: 100%;
+    left: 50%;
+    margin-left: -8px;
+    border-color: transparent transparent black transparent;
+}
+.tooltip_el .sac_tooltip.arrow_bottom::after {
+    top: 100%;
+    left: 50%;
+    margin-left: -8px;
+    border-color: black transparent transparent transparent;
+}
+.tooltip_el .sac_tooltip.arrow_left::after {
+    right: 100%;
+    top: 50%;
+    margin-top: -8px;
+    border-color: transparent black transparent transparent;
+}
+.tooltip_el .sac_tooltip.arrow_right::after {
+    left: 100%;
+    top: 50%;
+    margin-top: -8px;
+    border-color: transparent transparent transparent black;
+}
+
+/* Additional arrow classes, added  */
+.tooltip_el .sac_tooltip.arrow_bottom_right80per:after {
+    top: 100%;
+    left: 80%;
+    margin-left: -8px;
+    border-color: black transparent transparent transparent;
+}
+/* css for tooltip ends here */

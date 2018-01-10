@@ -1,0 +1,1022 @@
+body {
+    width: 530px;    /* was 510 till 23Jan17  */
+    height: 450px;
+    font: 16px Calibri;
+    background-color: hsl(34, 44%, 68%);  /* beige darkened on 9Sep16 , later tan modified in hsl */
+    /* overflow: hidden; */
+     zoom: 1.2;   /* A problem was there on 7Feb17, 
+zoom 0.7 I did & then found main page was zoomed & therfore the popup also showing-up zoomed. 
+I did Ctrl+0 & it became ok.  */
+}
+
+#result_1{ 
+    font: bold 14px Calibri; 
+    box-shadow: 0 0 1px gray; 
+    padding: 1px 0 0 5px;
+    width: 292px; 
+    margin: 0 0 0 -1px;
+    color: #666; 
+    text-shadow: 0 0 1px hsl(0, 0%, 93%); 
+}
+
+textarea {
+    font-size: 15px;
+    background-color: hsl(10, 40%, 93%);
+    resize: none;
+}
+textarea#img_Name {
+    width: 100%;
+    
+    resize: vertical;
+}
+textarea#Notes {
+    width: 100%;
+    resize: vertical;
+}
+textarea#Edit_in_popup__textarea_1 {
+    width: 97%;
+    display: none;
+    resize: vertical;
+}
+div#read_only {
+    position: relative;
+    display: none;
+    margin: 0 0 0 1px;
+    color: rgb(200,0,0);
+    background-color: hsl(34, 44%, 72%);
+    font: 16px "times new roman";
+    border: 1px solid;
+}
+div#read_only_1 {
+    margin: 0 0 2px 0;
+    padding: 0 0 1px 7px;
+    background-color: black;
+    color: rgb(245, 245, 160);
+}
+div#read_only div.titleName, div.imgName {  /* Note-: div#read_only.titleName -- will not work, 1 space is essential */
+    position: relative;
+}
+div#read_only div.imgName {
+    margin: 0 0 1px 0;
+}
+div#read_only .titleName { border-bottom: 1px solid rgba(255,0,0,0.4); padding: 1px 0 1px 1px;}
+div#read_only span.sp_imgName {
+    margin: 0px 2px 0 0;
+    background-color: rgba(0,240,0, 0.35);
+    border-bottom: 1px solid rgba(0,240,0, 0.75);
+    padding: 0 2px 0 1px;
+    /* font: 16px monospace; */
+    font-size: 17px;
+    text-shadow: 0.2px 0.2px 0 rgb(100,130,130);
+    letter-spacing: 0.1px;
+    color: black;
+}
+div#read_only span.sp_title {
+    /* border-right: 2px solid rgb(170,0,0); */
+    /* border-left: 1px solid rgb(170,0,0); */
+    border-bottom: 2px solid rgba(0, 225, 0, 0.3);
+    background-color: rgba(0, 245, 0, 0.25);
+    color: black;
+    font: 15.5px "Segoe UI", Calibri;
+    text-shadow: 0.1px 0.2px 0 rgb(10,40,40);
+    padding-right: 2px;
+    margin: 0 2px 0 0;
+}
+div#read_only span.sp_title:nth-child(even) { background-color: rgba(100, 255, 0, 0.9); } /* this not working, find ?  */
+div#read_only span.sp_Cat_name {
+    /* position: absolute; */
+    background-color: rgba(255, 255, 0, 0.5);
+    margin: 0 0 0 11px;
+    padding: 0 1px 0 1px;
+    color: rgb(220,50,0);
+    font: 14px calibri;
+}
+
+
+div#imgName_edit__CaseV {
+    position: relative;  /* for absolute pos of tooltip below  */
+    margin: 0 0 0 30px;
+    display: none;
+}
+input#inp_chkbox_1_imgName, #inp_chkbox_2_title {
+/*  for some reasons, absolute positioning was not working, when kept in #--id--selector
+    position: absolute;
+    right: 5;
+    bottom: 0;*/
+    
+    /*margin: 0 0 0 40px;*/
+}
+div#imgName_edit__CaseV div#info__CaseV {
+    /*margin: 0 0 0 -23px;*/
+}
+div#tooltip_for_CaseV {
+    position: absolute;
+    right: 17px;
+    bottom: -5px;
+    background-color: black;
+    padding: 3px 8px;
+    color: lightgray;
+    transition: all 1.3s;  /* left & top */
+    display: none;
+}
+div#imgName_edit__CaseV .tooltip_for_CaseV__show {
+    bottom: 0px;
+    right: 8px;
+}
+
+div#tooltip_for_CaseV.arrow_at_bottom::after {
+    content: "";
+    position: absolute;
+    border-width: 6px;
+    border-style: solid;
+    top: 100%;
+    left: 8%;
+    margin-left: -6px;
+    border-color: black transparent transparent transparent;
+}
+
+
+
+
+
+textarea#Edit_in_popup__imgName {
+    /* position: relative; */
+    /* top: -5px; */
+    width: 97%;  /* decreased from 100% for btn kept next to it */
+    display: none;
+    /* font-family: calibri; */
+    resize: vertical;
+    /* margin: -4px 0 3px 0; */
+}
+.ta_arrow_btns {
+    position: relative;
+    bottom: 5px;
+    /* font: bold 16px Calibri; */
+    line-height: 1;
+    width: 15px;
+    padding: 0;
+    margin: 0 0 0 -4px; 
+    /* vertical-align: 6px; */   
+    text-shadow: none;
+    border: 1px solid gray;
+    border: none;
+    border-top: 2px solid transparent;
+    border-left: 3px solid transparent;    
+    background-color: transparent;
+    background-image: url(/icons/33x68px_thicker_iPhotoDraw_made_darkerbrown.png);
+    background-size: 12px 15px;
+    background-repeat: no-repeat;
+    color: transparent;
+    border-image: none;
+    border-radius: 4px;
+    outline: none;    
+    opacity: 0.5;
+}
+.ta_arrow_btns:hover { opacity: 1; }
+.ta_arrow_btns:active {
+    border-top: 2px solid blue;
+    border-left: 3px solid blue;
+}
+/* this is temporaryily kept here, css also is pending!! 
+try icons for this button */
+button#to__ta_1 {}
+button#to__ta_2 {
+    bottom: 6px;
+}
+button#to__ta_3 {
+    /* bottom: 5px; */
+}
+button#to__ta_123 {
+    bottom: 0px;
+    margin: 0 0 0 5px;
+    width: 20px;
+    background-size: 15px 18px;
+    line-height: 1.2;
+    /* padding: 0 0 0 5px; */
+    /* text-align: center; */
+}
+button#to__ta_123:hover {
+    width: 35px;
+    background-color: gainsboro;
+}
+
+textarea#Edit_in_popup__Notes {
+    width: 97%;
+    display: none; 
+    resize: vertical;
+    /* margin: -5px 0 0 0; */
+}
+div#msg_All_same {
+    font: bold 19px Calibri;
+    color: rgb(0, 0, 200);
+    text-shadow: 0 0 13px yellow;
+    margin: 0 0 0 50px;
+    display: none;
+}
+
+#textarea_1,#textarea_2 { 
+    width: 100%; 
+    /* height: 1.4em; */ 
+    margin: 0 0 7px 0; 
+    font: 15px Calibri;
+    box-shadow: 0 0 1px lightyellow;  
+    border: 1px solid rgb(220,220,220); 
+    /* overflow: hidden; */
+    outline: none;  
+    resize: vertical;  }
+
+#textarea_1 {font-size: 17px;background-color: hsl(10, 40%, 94%);text-shadow: 0 1px 0 rgb(220,220,220);resize: vertical;transition: height 0.3s;}
+
+#textarea_1__character_count { 
+    position: absolute;
+    right: 4px;
+    top: -4px;   
+    width: 44px;
+    font: 16px Calibri;
+    text-align: center;
+}
+#textarea_1__character_count_1 {
+    float: left;
+}    
+#textarea_1__character_count_2 { 
+    /* display: inline; */
+}    
+#textarea_1__character_count_3_Clear_float {
+    clear: both;
+}
+
+div#tooltip_for_textarea_1{
+    position: absolute;
+    top: 35px;
+    left: 20px;
+    /* appearance below, positioning above  */
+    font: 18px Calibri;
+    border: 2px solid blue;
+    border-radius: 1px;
+    background: black;
+    color: yellow;
+    /*width: 100px;*/
+    padding: 4px 13px;
+    z-index: 10;
+    display: none;
+}
+
+div#copy_paste_ta_container {
+    position: absolute;
+    top: 50;
+    left: 198px;
+    box-shadow: 0 0 5px tan;
+    border: 2px solid rgba(100,70,70, 0.8);
+    background-color: rgba(100,70,70, 1);
+    border-radius: 3px;
+    z-index: 26;
+    display: none;
+}
+textarea#copy_paste_Edit, textarea#copy_paste_Edit_1 {
+    width: 316px;
+    font: 18px Calibri;
+    word-spacing: 3px;
+    color: rgb(0,0,120);
+    resize: vertical;
+    outline: none;
+}
+div#copy_paste_btn_container {
+    margin: 0 0 0 55px;
+}
+div#copy_paste_ta_container button {
+    padding: 0 4px;
+} 
+button#Save_to_lS {
+    margin: 0 10px 0 0;
+}  
+
+
+
+#div_container_for_chkbox__Save_textarea_1__or__not {
+    position: absolute;
+    right: 75px;
+    top: -6px;
+}
+
+label[for="Save_textarea_1__or__not"] {
+    font: 15px Calibri;
+    color: rgb(51,51,51);
+}    
+
+
+#textarea_3 {
+    width: 100%;
+    height: 1.4em;
+    margin: -3px 0 0 0;
+    overflow: hidden;
+    font: 16px Calibri;
+    background-color: hsl(60, 80%, 85%);
+    resize: vertical;
+}      
+
+#btn9 { 
+    position: relative;
+    width: 120px;
+    padding: 1px 6px;  /* 1px 6px; This is normal padding, which is ok, but I have increased left-padding, as span_8 on btn9 gives blue-colored 'outline' onclick.  */
+    /* padding-left: 17px; */
+    /* background-image: url("../icons/icon_favorites.png"); */
+    /* background-repeat: no-repeat; */
+    /* background-position: 3% 0%; */
+}
+/* #btn9:focus { outline: 2px solid orange; } */
+.btn9 { 
+    width: 150px;
+    font-weight: bold;
+}
+  #btn8 { margin: 0px 0 0 40px; padding: 5px 7px 3px 4px; display: none;}
+
+  #Added,#not_Added { position: absolute; right: 90px; top: 165px; color: rgb(0, 200, 0); 
+           padding: 5px 17px; border-radius: 4px 8px; background-color: rgba(0, 240, 0, 0.1);
+           font: 45px Calibri; display: none; 
+                                                    /* margin: 0 0 0 7px; display: inline-block; */ }
+  #not_Added { right: 10px; top: 160px; color: rgb(0, 170, 0);    }
+
+  .span_btn8 { background-image: url("../icons/icon_favorites.png"); 
+               background-repeat: no-repeat; background-position: 0% 50%; /* left center -- Default */
+               padding: 5px 0 0 20px; font: 16px Calibri; /* cursor: pointer;*/ }
+
+  input[type="checkbox"] { width: 16px; height: 16px; vertical-align: -4px; }
+  label { font-weight: bold; color: saddlebrown; margin: 0 0 0 -5px;}
+  /* #checkbox_container_div__hidden { display: none; } */
+  .input_checkbox_hidden { display: none; }
+  .No_of_fol { background-color: rgba(0, 240, 0, 0.3); padding: 0 8px;
+                border-radius: 9px; font: 18px Calibri; }
+
+  #whats_remaining { font: 14px Calibri; }
+  #Recent_bMarks { /* position: fixed; */ /* bottom: 0; */ /* right: 0; */ }
+
+  #container_No_of_bMarks { position: absolute; top: 127px; right: 0; 
+                  font: bold 30px Consolas; /* color: brown; */ color: hsl(35, 35%, 60%);
+                  background-color: rgba(0, 100, 0, 0.1); 
+                  padding: 1px 15px; border-radius: 3px; text-shadow: 0 0 1px Yellow;  z-index: 25; }
+  
+  #No_of_bMarks { text-align: center; /* opacity: 0.8; */ }
+
+  #No_of_bMarks_fol { font: bold 24px Consolas; color: hsl(35, 35%, 60%);   }
+
+#bookmarks { 
+    /* position: relative; */ 
+    width: 300px;
+    height: 10px;
+    margin: -1px 0 0px 0;
+    padding: 5px 0;
+    border: 1px solid orange;   
+    background: linear-gradient(Wheat, gold);
+    overflow: hidden;
+}
+                
+select#CategoryNames_Select {
+    width: 210px;
+    font: 15px monospace;
+    background-color: hsl(0, 0%, 99%);
+    /* position: absolute; */
+    /* top: -10px; */
+}
+
+
+div#two_textarea_s {
+    position: absolute;
+    left: 229px;
+    top: 108px;
+}
+
+div#Select_and_two_textarea {
+    /* the below bg-color should be the same, as of body. 
+    Just, pasted the below line from body {}.
+    See, top-line of this popup.css for body--background-color {}   */
+    background-color: hsl(34, 44%, 68%);  /* beige darkened on 9Sep16 , later tan modified in hsl */
+    position: relative;
+    /* top: -24px; */
+    /* width: 206px; */
+}
+
+div#Add_bMark_btns {
+    margin: -5px 0 0 0px;
+    /* border: 1px solid blue; */
+    width: 217px;
+    position: absolute;
+    left: 235px;
+    z-index: 25;
+}
+
+div#Add_bMark_btns #count_of_bMarked {
+    margin: 0 10px 0 0;
+    font: bold 17px Calibri;
+}
+
+
+
+div#Show_SpeedDial_page_btn_container {
+    position: absolute;
+    top: 37px;
+    right: 7px;
+    border: 1px solid blue;
+    z-index: 10;
+}
+button#btn_Show_SpeedDial_page {
+    padding: 0px 6px 1px 5px;
+    line-height: 0.97;
+    /* z-index: 44; */
+}
+div#SDial_menu_hover {
+    position: absolute;
+    right: -14px;
+    top: -1px;
+    width: 15px;
+    height: 15px;
+    background-color: saddlebrown;
+}
+div#SDial_menu_container {
+    position: absolute; 
+    right: 14px;
+    top: 4px;
+    z-index: 50;
+    border: 2px solid brown;
+    background-color: brown;
+    display: none;          /* opacity: 0;  transition: opacity 1s; -- can also be used, here*/
+}
+/* See, CSS Dropdowns & CSS Tooltip, on w3schools , from where this :hover idea has been taken 
+Instead-of display: none to block,   transition: opacity; can also be used.
+See, 'Fade In Tooltips (Animation)' on this page for transition example. http://www.w3schools.com/css/css_tooltip.asp */
+div#SDial_menu_hover:hover #SDial_menu_container {
+    display: block;         /* opacity: 1; */
+}
+
+textarea#filter_ta__for_ul {
+    width: 90%;
+    margin: 0 0 3px 0;
+}
+span#no_of_li_found {
+    color: gold;
+    border: 1px dotted goldenrod;
+    margin: 0 0 0 -3px;
+    position: relative;
+    top: -7px;
+    padding: 0 0px 0 0px;
+}
+
+ul#ul_CategoryNames {
+    width: 210px;
+    height: 181px;
+    border: 1px solid gray;
+    box-shadow: 0 0 1px;
+    margin: -3px 0 0 0;
+    padding: 0 0 0 0px;
+    list-style-type: none;
+    overflow-y: scroll;
+    /* overflow-x: hidden; */
+}
+button#searchfilter_li {
+    position: absolute;
+    left: 209px;
+    top: 59px;
+    padding: 0px 3px;
+}
+div#filter_input_container {
+    position: absolute;
+    top: -25px;
+    display: none;
+}
+input#filter_input__for_ul_0 {
+    width: 190px;
+    font: 16px monospace;
+    background-color: hsl(10, 30%, 95%);
+    /* border: 1px solid hsl(10, 40%, 70%); */
+    border: 1px solid saddlebrown;
+    /* border: none; */
+    box-shadow: 0 0 5px saddlebrown;
+    padding: 0 0 1px 2px;
+    outline: none;
+    /* transition: border 0.4s; */
+}
+input#filter_input__for_ul_0:focus {
+    /* box-shadow: 0 0 5px saddlebrown; */
+    /* border: 1px solid saddlebrown; */
+}
+div#filter_input_container span {
+    background-color: saddlebrown;
+    color: gold;
+    margin: 0 0 0 -3px;
+    padding: 0 3px 1px 1px;
+    border-radius: 2px;
+}
+
+ul#ul_CategoryNames_clone {
+    width: 240px;
+    height: 251px;
+    border: 1px solid gray;
+    box-shadow: 0 0 1px;
+    margin: -3px 0 0 0;
+    padding: 0 0 0 0px;
+    list-style-type: none;
+    overflow-y: scroll;
+    /* overflow-x: hidden; */
+    z-index: 50;
+}
+
+li.myListClass { background-color: rgb(233, 233, 233); border-bottom: 1px dotted Orange; 
+    padding: 0 0 0 2px;
+    position: relative; /* position Added, for span.li_span -- Added on 30Dec16 */ 
+}
+
+.ui_list_placeholder { height: 1.6em; line-height: 1.2em;
+  background-color: gold; border: 1px dotted red; 
+  border-bottom: 2px red; }
+
+li.li_Class_lightskyblue_bg {
+    background-color: lightskyblue;
+    /* border: 1px solid blue; */
+    box-shadow: 0 0 1px red;
+    padding: 0 0 0 3px;
+}
+
+li.li_Class_pink_bg {
+    background-color: pink;
+    /* border: 1px solid blue; */
+    box-shadow: 0 0 1px red;
+    padding: 0 0 0 3px;
+}
+
+li.selected { 
+    /* background-color: rgba(218, 165, 32, 0.9);  orange that I was using
+    changed, to below on 9Sep16 */
+    
+ background-color: rgba(30,0,0,0.4);
+    color: white; 
+    
+ border: 1px solid orange; 
+ padding: 3px 5px 4px 4px;
+ font: 14px CURSIVE;
+ /* border-top: 4px solid red; */ /* border-bottom: 4px solid red; */ /* outline: 2px solid blue; */ /* text-shadow: 0 0 1px blue; */ 
+          
+ /* font-weight: bold; */
+}
+
+span.li_span {
+    position: absolute;
+    right: -4px;
+    visibility: hidden;
+    padding: 0 5px;
+    /* background-color: pink; */
+}
+
+span.show_span {
+    visibility: visible;
+}
+
+input#changing_bMark_id {
+    display: none;
+}
+
+div#selected_li_count {
+    position: absolute;
+    left: 213px;
+    top: 125px;
+    font: bold 24px Consolas;  /* 11Sep16 Increased font-size to 24px with body-color--tan */
+    padding: 0 7px;
+    color: hsl(0,0%,10%);
+    text-shadow: 0 0 13px yellow;
+    border-radius: 20px;
+    background-color: rgba(0, 210, 0, 0.15);
+}
+
+#Edit_Dial {
+    position: absolute;
+    left: 212px;
+    top: 93px;
+    font: bold 24px Consolas;
+    padding: 0 7px 0 4px;
+    border: 2px solid hsl(34, 44%, 68%);
+    /* transition: border 0.3s; */
+    transition: width 0.4s;
+}    
+/*
+#Edit_Dial:hover {
+    border: 2px solid hsl(34, 44%, 48%);
+} 
+*/   
+
+div#result {
+    position: absolute;
+    top: 93px;       /* 31Dec16 tak  93px */
+    left: 241px;     /* 31Dec16 tak  241px */
+    width: 278px;      
+    border: 1px solid gainsboro;
+    background-color: rgba(0, 240, 0, 0.1);       
+    display: none;
+}
+div#result__1 {
+    font: bold 16px Calibri;      
+    color: rgb(0,0,200);
+    padding: 1px 5px;
+}    
+div#close_result {
+    position: absolute;
+    right: 10;
+    top: -19px;
+    cursor: pointer;
+    font: 18px calibri;
+    color: gray;
+}
+div#close_result:hover {
+    color: rgb(200, 0, 0);
+}    
+
+
+div#div_chkbox_png_or_jpg__reset_btn {
+    position: absolute;
+    top: 136px;  /* was 160px, till 9May17, when 2 quick ytb checkboxes--div Added & top had-to-be-changed */
+    left: 238px;
+    width: 242px;   /* was 202px, on 23Feb17, when 2nd checkbox added, for appending ytb-address */
+    border: 1px solid gainsboro;
+}
+div#quick_imgName_for_youtube {
+    width: 235px;
+}
+
+div#Saved_msg {
+    display: none;
+    background-color: rgba(144, 238, 144, 0.4);
+    color: rgb(200, 0, 0);
+    font: bold 17px Georgia;
+    width: 62px;
+    text-align: center;
+    margin: 26px 0 0 36px;
+    padding: 4px 5px;
+    border-radius: 3px;
+}
+
+div#append__only_ytb_address {
+    display: inline-block;
+}
+
+div#quick_and_take_scr {
+    display: inline-block;
+    width: 53px;
+    margin: 0 0 0 10px;
+}
+
+/*Instead of config, used #id  ,, first I kept span, then div -- So not keeping anything here in css, div--or--span,  just #id */
+#ttip_1 {
+    bottom: 160%;
+    width: 145px;
+    line-height: 1.6;
+    border: 2px solid red;
+    padding-bottom: 6px;
+}
+
+span#Saved_msg1 {
+    display: none;
+    background-color: lightyellow;
+    color: rgb(200, 0, 0);
+    font: bold 16px "times new roman";
+    /* width: 62px; */
+    text-align: center;
+    margin: 0 11px 0 0;
+    padding: 4px 7px;
+    border-radius: 3px;
+}
+
+
+input#ch_box_1_Remember_last_input {
+    display: none;
+}
+
+button#btn_Reset_textareas {
+    padding: 0px 2px;
+    margin: 0 0px 0 14px;
+}
+
+textarea#date_today {
+    position: absolute;
+    top: 160px;
+    right: -21px;
+    width: 85px;
+    font: 16px Calibri;
+}
+
+button#btn_Save_4_textarea_s {
+    padding: 0px 2px;
+    font-weight: bold;
+    margin: 0 0 0 8px;
+}
+button#btn_CopyTo_category {
+    padding: 0px 2px;
+    /* font-weight: bold; */    
+}
+div#copyTo_Another_Category {
+    display: none;
+}
+
+button#Empty_Notes {
+    padding: 0px 3px;
+    position: absolute;
+    top: 203px;
+    right: -16px;
+}
+
+button#Empty_ta_img_Name {
+    padding: 0px 3px;      position: absolute;      
+    top: 164px;      
+    left: 215px;
+}
+
+button#Empty_tags {
+    padding: 0px 6px;      
+    position: absolute;      
+    top: 6px;      
+    right: 180px;
+}
+
+div#Names_of_Categories_selected_in_ul_1 {
+    position: absolute;
+    top: 25px;
+    left: 249px;  /* last was 213px */
+    width: 174px;
+    padding: 0 0 0 1px;
+    background-color: rgba(218, 165, 32, 0.9);      
+    /* color: yellow; */
+}
+ul#ul_2__Selected_Cat_List {
+    position: relative;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    /* color: rgb(0,0,190); */
+    color: rgb(255, 240, 0);
+    font: 14px Calibri;
+}
+ul#ul_2__Selected_Cat_List li {
+    border-bottom: 1px dotted rgb(255, 200, 150);
+    padding: 0 0 2px 2px;
+}    
+span.No_span {
+    color: rgb(255, 210, 0);
+
+    margin: 0 2px 0 -22px;
+}
+span.close {
+    position: absolute;
+    left: 133px;
+    /* border: 1px solid orange; */
+    border-radius: 10px;
+    padding: 0 8px 0 36px;
+    font-weight: normal;
+    transition: padding 0.5s;
+}
+span.close:hover {
+    background-color: gray;
+    color: whitesmoke;
+    /* padding: 0px 8px 0px 24px; */
+    cursor: pointer;
+    /* left: 135px; */
+    /* top: -3px; */
+}
+div#msg {
+    position: absolute;
+    top: 30px;
+    left: 220px;
+    width: 200px;
+    border: 1px solid gray;
+    display: none;
+}
+div#msg span {
+    margin: 0 0 0 30px;
+    padding: 1px 6px;
+    border: 1px dotted brown;
+}
+div#msg span:hover {
+    cursor: pointer;
+}    
+
+div#Clipboard_div_container {
+    position: absolute;
+    top: -4px;
+    left: 433px;
+    width: 105px;
+    /* border: 1px solid rgb(210, 158, 0); */
+    z-index: 26;
+}
+#Clipboard_div_container button {
+    padding: 0 3px;
+}
+#Clipboard_div_container button:hover {
+    box-shadow: -5px -2px 5px orangered;
+}    
+#Clipboard_div_container button:active {
+    border-left: 2px solid blue;
+    /* outline: 2px solid blue; */
+}
+#chkbox_Clipboard {
+    margin: 0 12px 0 0;
+}
+#prepend__txt_to_ta__1 {
+    margin: 0 6px 0 0;
+}
+
+
+div#div_4 {
+    /* margin: -24px 0 0 0; */ 
+    border: 1px solid gainsboro; 
+    color: #333;
+}
+div#div_4_0 {  
+    float: left;  /* optional, even without float, works the same. As, the following, divs are float: left; , So, kept here also. */
+    margin: 0 10px 1px 4px;
+    display: none;  /* display none, just given, so that slideDown() effect can be given, otherwise is not required, as the #div_4_0 remains empty */
+}
+img#show_img_on_Add_Dial {
+    height: 70px;
+    max-width: 250px;
+    transition: height 0.4s;
+}
+img#show_img_on_Add_Dial:hover {
+    height: 150px;
+}    
+#div_4_2 #span__2 {
+    font: bold 16px Calibri;
+    background-color: rgba(255, 25, 0, 0.2);
+    padding: 0 9px;
+    border-radius: 3px;
+}    
+div#div_4_4 {
+    clear: both;
+}
+
+/* The below does not exist, has been Closed on 16Sep16, when res_arr_found wala multi-Cat-search wala func changed, with chkbox in options.html 
+span#div_4_2 {
+    margin: 0 0 0 20px;
+    color: rgb(0, 0, 225);
+    font-weight: bold;
+}
+*/
+
+.search_res_divs_found {
+    float: left;
+    box-shadow: 0 0 3px orange;
+    padding: 0px 6px;
+    background-color: rgba(255, 255, 0, 0.5);
+}
+
+div.search_res_divs_not_found {
+    float: left;
+    padding: 2px 5px;
+    /* box-shadow: 0 0 3px gold; */
+    border: 1px solid gold;
+    background-color: red;
+    color: yellow;
+    font: 15px Calibri;
+}
+
+li.count {
+    margin: -3px 0 0 0;
+}
+
+span.CategoryName_found {
+    /* margin: -4px 0 0 0; */
+    /* padding: 0px 0 0 0; */
+    position: relative;
+    top: -2px;
+}
+
+div#div_pic_show {
+    box-shadow: 0 0 3px orange;
+    width: 106px;
+    position: relative;  /* As, 'div#All_same__pic' inside this div is kept-with position:absolute;  */
+    /* top: -40px; */
+    /* left: 250px; */
+    margin: 0 5px 0 5px;
+    min-height: 50px;
+    /* float: left; */
+    clear: both;
+    display: none;
+}
+img.pic_show_1 {
+    height: 50px;
+    width: auto;
+    max-width: 340px;
+    transition: height 0.4s;
+}
+img.pic_show_1:hover {
+    height: 170px;
+    /* padding: 1px; */
+    border: 2px solid hsl(0,0%,30%);
+    box-shadow: 0 0 5px gold;
+}    
+img.pic_show_2 {
+    height: 40px;
+    width: auto;
+    margin: 0 0 0 6px;
+}
+div#All_same__pic {
+    position: absolute;
+    top: 12px;
+    right: 1px;
+    font: 14px Calibri;
+    line-height: 0.9;
+    display: none;
+}
+div.separate_Cat_divs{
+    border: 2px solid orangered;
+    padding: 2px 3px;
+    margin: 0 3px;
+    /* float: left; */
+}
+
+
+div#div__title_from_lStorage_arr {
+    font: 17px calibri;
+    background-color: hsl(10, 40%, 93%);   /* this was rgba(255,255,0, 0.6);  till 16Jan17*/              /* body-color is a variant of tan   rgba(255, 255, 0, 0.2); */
+    padding: 1px 0 2px 7px;
+    border: 1px dotted hsl(34, 44%, 50%);  /* bg is 'hsl(34, 44%, 68%)' */         /* this was with body-color beige,  rgba(46, 139, 87, 0.5); */
+    border-bottom: 1px dotted hsl(120, 44%, 45%);
+    border-left: 4px solid hsl(120, 44%, 45%);
+    box-shadow: 0 0 4px orangered;
+    margin: -3px 0 4px -5px;
+    letter-spacing: 0.1px;          /* 0 is normal */
+    word-spacing: 0.6px;            /* 0 is normal */
+    text-shadow: 0 0.5px 0 rgb(210,210,210);
+    display: none;
+}
+
+div#div_5 {
+    border: 1px solid gainsboro; 
+}
+
+
+
+
+div#Edit_info {
+    position: relative;
+    margin: 0 0 0 2px;
+    border: 1px solid rgba(200,0,0,0.5);
+    display: none;
+    transition: height 0.5s;
+}
+/* the below class is for above div#Edit_info
+the below class is used for transition only, as the height is increased  
+to 48px thru js,  thru func  gid("inp_chkbox_1_imgName").onchange
+the height comes normally to 24px, with contents.  */
+.Edit_info_height_for_transition_effect_only {
+    height: 24px;
+}
+span#Edit_info_1 {
+    font: 17px Segoe UI Semibold,Cambria;
+    color: rgb(200,0,0);
+    word-spacing: 1px;
+    margin: 0 14px 0 0;
+}
+button#Cancel_Editing {
+    padding: 0px 8px;
+    
+}
+
+div#open_downloads_folder {
+    position: fixed;
+    bottom: 10px;
+    right: 20px;
+    box-shadow: 0 0 3px green;
+    transform: rotate(90deg);
+    line-height: 0.5;
+    font: bold 37px arial;
+    padding: 0;
+}
+
+
+
+div#close_popup {
+    position: fixed;      bottom: 20px;      
+    right: 130px;      
+    box-shadow: 0 0 3px green;
+    font: bold 20px helvetica;
+    padding: 1px 5px;
+    background-color: rgba(0,240,0,0.2);
+}
+
+div#open_chrome_downloads {
+    position: fixed;      bottom: 10px;      
+    right: 80px;      box-shadow: 0 0 3px green;            
+    line-height: 15px;      
+    font: bold 36px arial;      padding: 0;
+}
+div#tooltip_for_id__open_chrome_downloads {
+    position: absolute;
+    top: -93px;
+    left: -190px;
+    /* width: 250px; */
+    font: 15px calibri;
+    border: 2px solid hsl(34, 44%, 61%);
+    border-radius: 3px;
+    background: lightyellow;
+    color: saddlebrown;
+    padding: 5px 12px 6px 10px;
+    visibility: hidden;
+}
+div#open_chrome_downloads:hover div#tooltip_for_id__open_chrome_downloads {
+    visibility: visible;
+}

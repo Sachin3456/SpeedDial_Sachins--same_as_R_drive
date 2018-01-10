@@ -1,0 +1,167 @@
+<div id="imgCapture_container_div43">
+	<div id="title_container">
+		<div id="title_holder">&nbsp;.....</div>
+		<div id="togglefold_height">'#imgCapture_container_div43' Added thru tabsE</div>
+	</div>
+
+	<textarea id='ta_img'></textarea>	<br>
+
+	<div id='resizable_info'>
+		<table id="marque_position">
+			<tr id='row1'>
+				<td>top</td><td>left</td><td>width</td><td>height</td><td>ratio</td>
+			</tr>
+			<tr id='row2'>
+				<td id='top'></td><td id='left'></td><td id='div_width'></td><td id='div_height'></td><td id='Aspect_ratio' title="1.7 @120% is 978-or-980 in width , left 22px">1.50</td> <!-- initial-value, as per width & height, in css. If i change css, change here & below also.  -->
+			</tr>
+			<tr id='row3'>	<!-- initial values are as per css__file, if css is changed, here also, need to be changed.-->
+				<td><input type="number" id="marque_top" value="140" max="2000" class="marque_pos_calc"></td>
+				<td><input type="number" id="marque_left" value="320" max="2000" class="marque_pos_calc"></td>
+				<td><input type="number" id="marque_width" value="480" max="2000" class="marque_pos_calc"></td>
+				<td><input type="number" id="marque_height" value="320" max="2000" class="marque_pos_calc"></td>	
+			</tr>
+			<tr id='row4'>	
+				<td><input type="number" id="marque_top_1" value="140" max="2000" class="marque_pos_calc"></td>
+				<td><input type="number" id="marque_left_1" value="320" max="2000" class="marque_pos_calc"></td>
+			</tr>
+			<tr id='row5'>	
+				<td><input type="number" id="top1" value="24" class="marque_pos_calc"></td>
+				<td><input type="number" id="left1" value="0" class="marque_pos_calc"></td>
+				<td><input type="number" id="width1" value="1026" class="marque_pos_calc"></td>
+				<td><input type="number" id="height1" value="576" class="marque_pos_calc"></td>	
+			</tr>	
+		</table>
+		<div id="btns_next_to_table">
+			<button id="zoom_10per">10%</button>
+			<div id="zoom_120per_info">120i</div>
+			<button id="remove_annotations" title="remove all annotations">xx</button>
+
+			<div id="help_tips" class="tooltip_el">help(i)   <!-- title="help\tips to use this screenshoter &#10;shortcuts&#10;
+			'accesskey' attr --&gth; shortcut key to activate/focus element." -->
+
+				<div class="sac_tooltip show_up_at_left arrow_right config_help_info">
+					<div id="ttip_heading" class="divs_inside_ttip">(#img_marque) -- (#player-container)</div>
+
+					<div id="inside_ttip_1" class="divs_inside_ttip">Size @zoom__1   <br>
+					854x480			</div>
+
+					<div id="inside_ttip_2" class="divs_inside_ttip">Size @zoom__1.2 	<br>
+					1024x576		</div>
+
+					<div id="inside_ttip_3" class="divs_inside_ttip">Size @zoom__1 on Dell 25" 	<br>
+					1280x720		</div>
+
+					<div id="inside_ttip_5">1024/576 & 854/480 == 1.777777...8		</div>
+
+					<div id="inside_ttip_9">Make sure vids are on_HD quality, when you see &nbsp;&nbsp;&nbsp;or take scr, <br>
+						otherwise, scr will be low_quality  <br>
+						& lly, the other.
+					</div>
+				</div>
+			</div>
+
+		</div>
+		<!-- this closed as now, using flex  <div id="clear_float"></div> -->
+	</div> <!-- End of div__id='resizable_info' -->
+
+	
+
+	<div id="zoom_120per_settings">
+		<button id="marque_size_1_7__any_height" title="width is reduced\increased,&#10;height remains untouched(same).&#10;-----------------&#10;to make ratio 1.7 &#10;left remains same. (any zoom)">W--1.7 @any_height</button> -
+		<button id="marque_left_aligned_at_100per_zoom">left any_z</button>
+
+		<button id="pos_and_input_at_zoom_120per">120%</button>
+		<button id="marque_size_1_7">1.7 left</button> +
+		<button id="marque_center" title="left is 22px, fixed&#10;img_marque.width() is fixed--980px;">1.7 center</button> -
+		<button id="marque_right_aligned" title="only changes #img_marque's left--pos">right</button>
+
+		<button id="marque_center_any">center (any w-h)</button>
+		<button id="focus_marque">focus mar
+			<span class="fa fa-certificate marque_focused"></span>
+		</button>
+
+		<div id="zoom_120per_settings__1">
+			<button id="player_api__zoom_1_point_2" title="$.offset() not used. &#10;left: 33, top:6 always thru .css method&#10;width(1024) height(576)&#10;ratio=1024/576= 1.77">z1.2</button>
+			<button id="marque_align_left" title="only aligns left to 33px">left</button>
+			<button id="marque_align_center" title="aligns to center at any-height">c</button>
+			<button id="marque_align_right" title="only aligns to right, using pos: left">right</button>
+			<button id="marque_align_top" title="only aligns top to pos: 6px;  -- any width&#10;document.body.scrollTop should be 54px;">top</button>
+			<button id="player_api__zoom_normal_to_1">&lt;-z1</button>
+		</div>
+	</div>
+
+	<div id="imglink_container">
+		<div id="take_and_save_scr">
+			<button id='take_scr' accesskey="t">take scr</button>
+			<!-- HTML DOM accessKey Property
+				https://www.w3schools.com/jsref/prop_html_accesskey.asp
+				https://www.w3schools.com/tags/att_global_accesskey.asp
+				However, in most browsers the shortcut can be set to another combination of keys. -->
+			<a id='save__scr_img' href='imgName_not_changed_check.png'>save scr</a>
+			<!-- <div id="imgSaved-click_animated"></div> this was working ok, but closed. css is yet not closed, 24Feb17 -->
+			<span id="Saved_msg">Saved</span>
+		</div>
+		
+		<div id='zoom_txt'>
+			<button id='youtube_pos'>youtube pos</button>
+			<button id='hide_show_toggle_marque' class='ONclass'>toggle m</button>
+			<button id='hide_show_toggle_ytp-progress-bar'>toggle prog-bar</button>
+			<span id="img_hover">hov</span>
+		</div>
+		<div id='imgCaptured'>
+			<img id='imgCaptured_1'>
+			<div id="Save_img_to_lS">
+				<button id="save_img1">save1</button>
+				<button id="get_img1">get1</button>
+				<button id="save_img2">save2</button>
+				<button id="get_img2">get2</button>
+				<button id="save_img3">save3</button>
+				<button id="get_img3">get3</button>				
+				<span id="which_img_loaded"></span>
+			</div>
+		</div>
+		<div id="divider3"></div>
+		<div id="just_btn_container" class="tooltip_el">
+			<div class="sac_tooltip show_up_at_left config_id_zoomtxt__JS">myconfig_js_only tooltip</div> <!-- the content will change with js, on tooltip.fadeOut() 
+				arrow_class is  config_id_zoomtxt__JS:after  -->
+
+			<span id='zoomtxt' title="click to find current html--zoom"></span>
+			<button id="ytb_corner">ytb_corner</button>
+			<button id="img_marque_size_854_480">mar_size 1</button>
+			<button id="img_marque_size_939_528">mar_size 1.1</button>
+			<button id="img_marque_size_576_1024">mar_size 1.2</button>
+
+			
+			<button id="marque_center_aligned_at_100per_zoom">C</button>
+			<button id="marque_right_aligned_at_100per_zoom">right @100</button>
+
+			<button id="img_marque_size_1280_720">mar_size 1280x720</button>
+			<button id="copy_img-path_to_clipboard">copy img-path<br>to clipboard</button>
+			<button id="save_pos">save<br>pos</button>
+
+			<textarea id="copy_img-path_to_clipb"></textarea> <!-- this is for copy-img-path, always visibility: hidden -->
+		</div>
+		<div id="just_btn_container1">
+			<button id="full_window_length">full window-length</button><span class="this_btn_info" title="gives left-&-top: 0, 
+width: 600px, height: 705px"><i>i</i></span>
+			<button id="copy_imgName_to_clipb">copy imgName</button>
+			<span id="ta_Saved_in_lS_msg">Saved</span>
+		</div>
+		<div id="Notes_container">
+			<textarea id="scr_related_Notes"></textarea>
+		</div>
+		
+		<button id='try_Capture'>chrome.captueVisibleT</button>
+	</div>
+
+	<div id='close_div'>x</div>
+
+</div> <!-- End of  id='imgCapture_container_div43'  -->
+
+
+<div id="img_marque"></div>
+<button id="left_side_btn" title="side btn, toggle s_shot div43">s</button>
+<div id="show_big_larger_img">
+	<img id='imgCaptured_1_clone'>
+</div>
+<div id="run_once_sac">samsung</div>

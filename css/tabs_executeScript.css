@@ -1,0 +1,533 @@
+/* started 28Jan17  */
+
+div#imgCapture_container_div43 {
+	position: fixed;
+	right: 10px;
+	top: 40px;
+	width: 360px;
+	padding: 0px 6px 2px 4px;
+	background-color: hsl(0, 0%, 95%) !important;
+	color: chocolate;
+	border: 2px solid rgba(150, 150, 150, 1);  /* was 5px solid rgba(20, 20, 255, 0.6) till 20Feb17 */
+	box-shadow: 0 0 1px rgb(170,170,170);
+	border-radius: 4px;
+	border-top-right-radius: 15px;
+	font: 13px Calibri;
+	/* text-align: center; */
+	z-index: 9876987698769;
+
+	/* the below closed totally, on 19Feb17, when scr--taking closed from popup.html, 
+	So, now the div43 will be just visible on when-appended to page.
+
+	visibility: hidden;  */
+
+	/* the above 'vis: hidden' has been kept, as a scr is already taken, 
+	by popup_Ext_1.js, before adding this div. After scr, it is made visible. See .js  */
+}
+
+.bar_height {
+	height: 30px;
+	width: 150px !important;
+	overflow: hidden;
+}
+
+div#title_container {
+	display: flex;
+}
+
+div#title_holder {
+	width: 110px;
+	/* cursor: move; */
+}
+div#title_holder:hover {
+	cursor: move;
+}
+div#togglefold_height {
+	/* width: 85%; */
+	border-left: 1px dotted brown;
+	padding: 0 0 0 3px;
+	font: 10px calibri;
+}
+
+div#imgCapture_container_div43 button {
+	-webkit-appearance: button;
+	max-height: 20px;
+	font: 16px Calibri; 
+	text-align: center;
+	text-transform: none;
+	padding: 1px 3px;
+	margin: 0 2px 0 0;
+	border: 2px outset buttonface;
+	border-radius: initial;
+	background-color: buttonface;
+	color: black;
+	box-shadow: none;
+	word-spacing: normal;
+	letter-spacing: normal;
+	line-height: 0.9;
+}
+
+button#hide_show_toggle_marque {
+	position: relative;
+}
+button#hide_show_toggle_marque::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 117%;
+    width: 25px;
+    height: 4px;
+    background-color: firebrick;
+}
+button#hide_show_toggle_marque.ONclass::after {
+	/* content: "";	*/ 		/* "on" , closed on 21Feb17  */
+	background-color: hsl(120, 100%, 30%);   /* 25% */
+}
+.col_gray {
+	color: hsla(0, 59%, 31%, 0.9) !important;
+}
+/* without !important this class was closed- by chrome on toggleClass.
+hsl(0, 59%, 41%) is brown  */
+
+div#img_marque {
+	position: fixed;
+	left: 320px;
+	top: 140px;
+	width: 480px;
+	height: 320px;
+	border: 1px dotted red;
+	z-index: 987698769;
+	/* the below closed totally, on 19Feb17, when scr--taking closed from popup.html, 
+	So, now the div43 will be just visible on when-appended to page.	
+	visibility: hidden;		*/
+}
+
+
+/* .ui-resizable-helper { border: 1px dotted blue; }  http://jqueryui.com/resizable/#helper */
+
+button#left_side_btn {
+	position: fixed;
+	left: -1px;
+	bottom: 150px;
+	z-index: 987654;
+	padding: 0 4px 2px 4px;
+	line-height: 1;
+	opacity: 0.2;
+	background: rgb(221, 221, 221);
+}
+button#left_side_btn:hover {
+	opacity: 1;
+}
+
+div#imglink_container {
+    position: relative;
+    text-align: left;
+}
+
+div#divider3 {
+    /* border-bottom: 1px dotted hsl(0, 0%, 80%); */
+}
+
+div#just_btn_container {
+	margin: 6px 0 6px 0;
+}
+span#zoomtxt {
+    margin: 0 8px 0 0;
+    padding: 0 3px;
+    font: 17px 'Source Sans Pro', Consolas;
+    border: 2px solid transparent;
+    color: brown;
+    text-shadow: 0 0 2px gold;
+    background-color: rgba(0,250,30, 0.1);
+    border-radius: 3px;
+}
+
+div#help_tips {
+    /* position: absolute; */
+    /* top: 43px; */
+    /* left: 0px; */
+    /* display: inline-block; */
+}
+
+div#help_tips div#ttip_heading {}
+
+div#help_tips div.divs_inside_ttip {
+	margin: 8px 0;
+	box-shadow: 0 0 1px gold;
+}
+
+div#help_tips div#inside_ttip_1 {}
+
+div#help_tips div#inside_ttip_2 {}
+
+div#help_tips div#inside_ttip_3 {}
+
+div#help_tips div#inside_ttip_5 {}
+
+div#help_tips div#inside_ttip_9 {}
+
+/* ---------------------------------------------
+on 12Sep17, closed these 2n & 3n below */
+div#just_btn_container :nth-child(2n) {
+    /* margin: 0 15px 0 0; */
+}
+div#just_btn_container :nth-child(3n) {
+    /* margin: 0 15px 0 0; */
+    /* position: absolute; */
+    /* right: 0; */
+}
+/* Closed ends here ----------------------------------- */
+
+div#take_and_save_scr {
+	border: 1px dotted #ddd;
+	margin: 0 0 1px 0;
+}
+
+div#imgSaved-click_animated {
+	/* position: absolute; */
+	/* right: 5px; */
+	/* top: 15px; */
+	display: inline-block;
+	background-color: firebrick;
+	height: 4px;
+	width: 0px;
+	margin: 0 0 0 10px;
+}
+
+div#imglink_container button#take_scr { 
+/* Note_Imp!! = only 'button#take_scr' over-rule, the above general 'button'. Then, I kept
+	'div#imglink_container' before the id & it started working  *//* position: absolute; *//* left: 0; */margin: 0 45px 0 0;padding: 1px 5px;font: 18px Calibri;line-height: 0.9;max-height: 24px;}
+
+a#save__scr_img {
+    /* all: initial; */
+    margin: 0 10px 0 0;
+    padding: 0 1px;
+    font: bold 19px monospace;
+    text-decoration: none;
+    color: #39c;
+    border: 1px dotted transparent;
+    /* background-color: hsl(0, 0%, 93%); */
+    /* border: 1px solid hsl(0, 0%, 88%); */
+}
+a#save__scr_img:hover {
+    border: 1px dotted rgba(51, 153, 204, 0.7);   /* #39c with 0.7 */
+}
+span#Saved_msg {
+	/* display: none; */
+    visibility: hidden;
+	position: relative;
+	left: 0;
+	background-color: rgba(144, 238, 144, 0.4);
+    color: rgb(200, 0, 0);
+    font: bold 17px Georgia;
+    text-align: center;
+    
+	/* margin: 0 0 0 0; */
+    
+	padding: 0 5px;
+    border-radius: 3px;
+	transition: left 1s;
+}
+
+
+textarea#ta_img {
+    width: 100%;
+    min-height: 22px;
+    height: 22px;
+    max-height: 88px;
+    font-family: Calibri;
+    font-size: 15px;
+    font-weight: bold;
+    color: sienna;
+    border: 1px solid hsl(0, 5%, 75%);
+    background-color: hsl(0, 10%, 96%);
+}
+
+textarea#copy_img-path_to_clipb {
+					/* the values in--closed comments were for checking. Keep them for future--checking. */
+	width: 3px;			/* 250px */
+	height: 4px;		/*  20px */
+	resize: none;
+	font: 3px Calibri;  /* 16px */
+	visibility: hidden;
+}
+
+button#copy_imgName_to_clipb {
+	width: 110px;
+}
+
+textarea#scr_related_Notes {
+	width: 98%;
+	font: 17px Calibri;
+	background-color: rgba(0, 250, 0, 0.1);
+	height: 25px;
+}
+
+span#ta_Saved_in_lS_msg {
+	display: none;
+	font: bold 20px 'Source Code Pro';
+	margin: 0 0 0 4px;
+}
+
+span#img_hover {
+	
+font: 16px Consolas;
+	
+padding: 0 11px;
+	
+background-color: rgba(0,250,0,0.1);
+	
+/* margin: 0 0 0 5px; */
+}
+
+div#imgCaptured {
+    margin: 8px 1px 2px 0;
+}
+
+img#imgCaptured_1 {
+	max-height: 210px;
+	width: auto;
+	max-width: 500px;
+	margin: 0 0 0 0;
+	border: 2px solid hsla(19, 56%, 40%, 0.8);  /* sienna with 0.8 */
+	box-shadow: 0 0 2px gold;
+}
+
+div#show_big_larger_img {
+	position: fixed;
+	top: 50px;
+	left: 120px;
+	display: none;
+	z-index: 999999999;
+	border: 8px solid rgb(235,0,0);
+	border-radius: 3px;
+	box-shadow: 0 0 7px orange;
+}
+div#show_big_larger_img img#imgCaptured_1_clone {
+
+height: 450px;
+
+margin: 0 0 -5px 0;
+}
+
+
+div#just_btn_container1 {
+    margin: 11px 0 0 0;
+}
+
+div#Save_img_to_lS {
+    margin: 2px 0 0 0;
+}
+div#Save_img_to_lS button#get_img1, #get_img2, #get_img3 {
+	position: relative;
+	visibility: hidden;
+	margin: 0 10px 0 0 !important;
+}
+span#which_img_loaded {
+    font: bold 22px Consolas;
+    vertical-align: -2px;
+    margin: 0 0 0 5px;
+    background-color: rgba(0,250,0,0.1);
+    padding: 0 7px;
+    border-radius: 3px;
+    color: brown;
+    text-shadow: 0 0 1px gold;
+}
+.btn_clicked {
+	color: rgb(100,0,0) !important;
+	text-shadow: 0 0 1px gold;
+}
+.btn_clicked:after {
+	content: '';
+	position: absolute;
+	top: 18px;
+	left: -1px;
+	display: block;
+	width: 36px;
+	height: 2px;
+	background-color: rgba(0,0,200, 0.6);
+}
+
+
+div#close_div {
+    position: absolute;
+    top: -6px;
+    right: -6px;
+    background-color: hsl(0, 0%, 97%);
+    border: 1px solid hsl(25, 75%, 87%);
+    padding: 0 5px 2px 5.7px;
+    border-radius: 7px;
+    font: 17px Calibri;
+    text-align: center;
+    line-height: 17px;
+}
+div#close_div:hover {
+    cursor: pointer;
+    background-color: hsl(0, 0%, 20%);
+    color: hsl(0, 0%, 97%);
+}
+
+
+
+
+
+
+/*  pending!!   */
+button#try_Capture {
+	display: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* table-related (not-table) css  */
+div#resizable_info {
+    display: flex;
+    /* flex-wrap: wrap; */
+}
+
+div#btns_next_to_table {
+	/* margin: 0 0 0 4px; */
+}
+
+div#zoom_120per_info {
+	margin: 4px 0 0 0;
+	font: 14px Consolas;
+	background-color: hsla(0, 0%, 93%, 1);
+	border: 1px solid hsla(0, 0%, 89%, 1);
+	width: 36px;
+	padding: 0 2px;
+}
+
+div#zoom_120per_settings {
+	margin: 2px 0 6px 14px;
+}
+button#pos_and_input_at_zoom_120per {
+    margin: 0 10px 0 0 !important;
+}
+div#zoom_120per_settings__1 {
+	margin: 4px 0 0 0;
+}
+span.marque_focused {
+	display: none;
+	color: rgb(210,0,0);
+	font-size: 15px;
+}
+
+/* table css only  */
+/* table#marque_position td   -- did not work, so i kept -- div#resizable_info td  */
+table#marque_position, div#resizable_info td {
+	/* margin: 0 0 0 -10px; */
+	padding: 0;
+	border-collapse: collapse;
+	/* width: 220px; */
+	background: transparent;
+	border: 1px dotted #ddd;
+	text-align: center;
+}
+
+table#marque_position {
+	/* float: left; */
+	margin: 0 8px 0 -5px;
+	width: 274px;
+}
+div#clear_float {
+	visibility: hidden;
+	/* clear: both; */
+}
+
+td#Aspect_ratio {
+    color: rgb(200,10,10);
+    /* font-weight: bold; */
+    font-family: "segoe UI", "times new roman", monospace;
+    font-size: 15px;
+    width: 40px;
+}
+
+tr#row1 {
+    color: gray;
+}
+
+tr#row2 {
+    font: 16px Calibri;
+    text-shadow: 0 0.3px 0.5px gold;
+    color: hsl(25, 75%, 42%);	/* (25, 75%, 47%) is chocolate  */
+    background-color: hsl(44, 41%, 96%);
+}
+
+tr#row5 {
+    display: none;
+}
+
+.marque_pos_calc {
+    width: 58px;
+    padding: 0 0 0 1px;
+    font: 18px Calibri;
+    text-shadow: 0 0.3px 0.5px gold;
+    color: hsl(25, 75%, 32%);
+    border: 1px solid hsl(0, 5%, 75%);
+    background-color: hsl(0, 10%, 97%);
+    outline: none;
+}
+
+.marque_pos_calc:focus {
+	border-bottom: 2px solid #039be5;
+}	
+
+/* table css only  -- ends here  */
+
+
+
+
+
+
+
+
+
+
+/*tooltip related css is below:  */
+/* ttip#1  -- ttip for span#zoomtxt ---Note: here  .sac_tooltip has not been used + this has its own arrow class also  */
+.tooltip_el .config_id_zoomtxt__JS {
+	/* Note--Imp--  for JS ttip, the first--2 prop, 
+    visibility & display, both should be there */
+	visibility: visible;
+	display: none;
+    /* other customization, below */
+	top: 12px;
+	width: 253px;
+	border: 2px solid rgb(0, 0, 210);
+	font-size: 16px;
+	font-weight: bold;
+	padding: 8px 8px;
+}
+/*the above has its own arrow__class  */
+.tooltip_el .config_id_zoomtxt__JS:after {
+    content: "";
+    position: absolute;
+    border-width: 10px 10px 10px 20px;
+    border-style: solid;
+    left: 100%;
+    top: 50%;
+    margin-top: -10px;
+    border-color: transparent transparent transparent black;
+}
+
+
+.tooltip_el .config_help_info {
+	top: 50px;
+	right: 322px;
+	width: 400px;
+	font-family: 'Source Sans Pro';
+	font-size: 19px;
+	font-weight: 300;
+	word-spacing: 1px;
+	border: 6px solid maroon;
+}

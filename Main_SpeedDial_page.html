@@ -1,0 +1,363 @@
+<!doctype html><html><head>
+<title>Sachins SpeedDial</title>
+<style></style>
+    <!-- Added on 23march17, was working ok, but no Usage yet. Just open this & start using. the lib 4_7_0 is in the SpeedDial_sac folder. It is not backed-up also.
+    <link rel="Stylesheet" href="font-awesome-4_7_0/css/font-awesome.css"> -->
+    <link rel="Stylesheet" href="css/tooltip_sac_Codepen_dvxMeY.css">    
+    <link rel="Stylesheet" href="css/Main_SpeedDial_page.css" />
+    
+    <script src="lib/jquery-2.1.4.js"></script>    <!-- from min to Plain .js, on 9Oct16 -->
+    <link rel="Stylesheet" href="lib/jquery-ui.css" />
+    <script src="lib/jquery-ui.js"></script>  <!-- on 9Oct16, changed jquery-ui.min.js to jquery-ui.js  -->
+
+<!-- Now the "R:\Chrome_Extensions__Making__started_14Jan15\SpeedDial_Sachins\lib\images" folder  - contains 12+1=13 .png files, which were not there, in this folder, before
+this date. I have extracted these images from
+"jquery-ui-1.11.4.custom - smoothness.zip" file
++ 1 file, downloaded from internet-search
+"css-images-ui-bg_flat_0_aaaaaa_40x100.png"
+May-be, this 13th file was not reqd., but still, as it was not in the .zip downloaded.
+-->
+</head>
+<body>
+
+<div id="CategoryName_heading_div_on_left_side">
+    <div id="Cat_len"></div>
+    <span></span>
+</div>
+
+    <!-- Checking Checkboxes by Clicking Parent List Item (filter li), ver2
+        http://codepen.io/sahni4you/pen/NRvOpA
+
+        How To Make an Animated Search Form
+        http://www.w3schools.com/howto/howto_css_animated_search.asp
+    -->  
+<div id="filter_ul">        <!-- Added 10Oct16 onkeyup="myFunction()" to add -->
+    <input type="text" id="filter_input" placeholder="Search Cat..">  <br>
+</div>
+
+<div id="decide_how_images_will_be_shown_in_dials">
+    <input type="checkbox">
+    <label>opacity</label>  <br>
+
+    <input type="checkbox">
+    <label>blur</label>     <br>
+
+    <input type="checkbox" id="decide_img_filter" checked>
+    <label for="decide_img_filter" title="decide img_opacity_blur in dials&#10;&#10;this is done thru $.toggleClass('img_filter_class') ">img opacity\blur</label>
+    <br>
+    <input type="checkbox" id="decide_img_filter1">
+    <label for="decide_img_filter">show img on hover</label>
+</div>
+
+
+<div id="CategoryName_Add-Edit_div_on_left_side">
+    <input type="checkbox" id="Add_Category_chkbox" value="some"><label for="Add_Category_chkbox">Add </label>  <br>
+
+    <input type="checkbox" id="Edit_Category_chkbox" value="some"><label for="Edit_Category_chkbox">Edit </label>   <br>
+    
+    <button id="btn__Search_page_open">Search<br><span>Categories</span></button>
+
+    <div id="Add_Category_text_div">
+        <div id="Add_Category_text_div_Heading_txt">Add Category</div>
+        <input type="text" id="Add_Category_input_text" placeholder="type Category Name..."> <br>
+        <div id="Success_Cat_Created">Success!! -- Created.</div>
+        <div id="Cat_Already_exists">Already Exists<br>Make another</div>
+        <div id="Add_Category_cancel_ok_div">
+            <button id="Add_Category_cancel">Cancel</button>
+            <button id="Add_Category_ok">Ok</button>
+        </div>
+    </div>
+
+    <div id="SpeedDial_displays_on_off_s">
+            <!-- tags off-ed from 27Aug16  
+            <input type="checkbox" id="tags_on_off_checkbox" value="some">
+            <label for="tags_on_off_checkbox">tags </label> <br>
+            -->
+
+        <div id="Notes_and_title_On_off_div">
+            <input type="checkbox" id="Notes_on_off_checkbox" value="some">
+            <label for="Notes_on_off_checkbox">Notes </label>   <br>
+
+            <input type="checkbox" id="title_1_2_lines_toggle__checkbox" value="some">
+            <label for="title_1_2_lines_toggle__checkbox">title </label>    
+        </div>
+
+        <div id="div_containing_No_of_dials_chkboxes">
+
+            <input type="radio" id="1_Dial_only" name="r1"  value="some">
+            <label for="1_Dial_only">1_Dial</label>  <br>                    
+
+            <input type="radio" id="2_Dials_checkbox" name="r1"  value="some">
+            <label for="2_Dials_checkbox">2_Dials</label>  <br>            
+
+            <input type="radio" id="3_Dials_checkbox" name="r1"  value="some">
+            <label for="3_Dials_checkbox">3_Dials</label>  <br>    
+
+            <input type="radio" id="4_Dials_checkbox" name="r1"  value="some">
+            <label for="4_Dials_checkbox">4_Dials</label>  <br>                
+
+            <input type="radio" id="5_Dials_checkbox" name="r1"  value="some">
+            <label for="5_Dials_checkbox">5_Dials</label>  <br>
+
+            <input type="radio" id="6_Dials_checkbox" name="r1"  value="some">
+            <label for="6_Dials_checkbox">6_Dials</label>  <br>            
+        </div>
+    </div>
+
+    <div id="Make_Sortable">
+            <input type="checkbox" id="divs_Sortable_checkbox" value="some">
+            <label for="divs_Sortable_checkbox">divs<br>Sortable </label>   <br>
+
+            <button id="Save_sorted" disabled>Save<br>sorted</button>   <br>
+
+            <button id="straighten_id_Nos">Nos. ok</button>
+    </div>  
+
+        <div id="Sortable_ON_msg">Sortable</div>    
+</div>
+
+
+<div id="Delete_Dial_Confirmation_msg">
+Are you sure you want to delete this Dial ?     <br>
+    <div id="Delete_confirmation_btns">
+            <button id="Delete_cancel_btn">Cancel</button>  &nbsp;&nbsp;
+            <button id="Delete_ok_btn">Ok</button>
+    </div>
+
+</div>
+
+
+<!--  CSS Tooltip           ( 28July16 )
+http://www.w3schools.com/css/css_tooltip.asp
+http://www.w3schools.com/css/tryit.asp?filename=trycss_tooltip_left  -->
+
+<div id="scroll_to_Bottom" class="tooltip">&vee;   <!-- title="scroll bottom"  -->
+    <span class="tooltiptext">to<br>bottom</span>
+</div>
+
+<div id="Show_CategoryName">Sh</div>
+<div id="Show_CategoryName_1"></div>
+
+<div id="scroll_dn__160px" class="tooltip">&Hat;           <!-- title="160px"  -->
+    <span class="tooltiptext2">160px</span>
+</div>
+
+<div id="scroll_to_Top_10" class="tooltip">&Hat;
+    <span class="tooltiptext1">to<br>top</span>
+</div>
+<button id="btn_Reload_Category_by_li_click">R</button> 
+
+<div id="Show_msg_container"></div>
+<div id="Show_msg"></div>
+
+<!-- delete__Dial ke bad Wait ka message  -->
+<div id="Wait__dial_deleted__straightening_Saving">
+Wait... 
+<div>Dial deleted,</div>
+Straightening & Reloading Category</div>
+
+<!-- func  Refresh_Reload_Category();  ka msg  -->
+<div id="func__Refresh_Reload_Category__ka_msg">
+Category Reloaded--Refreshed ...    <br>
+<div></div>
+</div>
+
+
+
+
+<!-- console - get height when rows="1"
+$("#Edit_Dial_dialog_box textarea").height();
+22  //Returns
+-->
+<div id="Edit_Dial_dialog_box">
+
+    <!-- <div id="Dial_Moved_msg"></div>   this closed on 20April17, when tooltip kept for this, delete in a few days  -->
+
+    <div id="Edit_Dial_heading">
+        <span id="Edit_Dial_heading_txt">Edit Dial</span>
+        <span id="Dial_serial_no"></span><span id="Dial_id_no"></span>
+        <span id="move_to_position">Move to pos</span><input type="number" id="input_no_2" value="5" min="1">
+    <button id="Move_dial">Move dial</button>
+
+    <div id="Dial_pos_up_dn_msg">Wait... <br>(moving Dial + straightening)</div>
+
+    </div>
+    
+    <!-- 'Dial_serial_no' is serial_no as it appears, 1,2,3... nothing to do with, where it is saved in 
+    lStorage Category_arr. The count starts from 1 to the no. of Dials, that are shown under a particular
+    Category. Say, you choose to Edit 5th item, starting from 1, so 5 will be shown in span->Dial_serial_no -->
+
+   
+    title <textarea id="title" rows="1" cols="85" placeholder="title..."></textarea>    <br>
+    <div id="show_title_with_style">
+        <span id="span_title">div</span>
+        <div id="div_title__text_container">
+            <div id="div_title__text"></div>
+        </div>
+    </div>
+    <span id="span_url">url</span> <textarea id="url" rows="1" cols="85" placeholder="url..."></textarea>    <br>
+    <span id="span_img_Name">img_Name</span> <textarea id="img_Name" rows="1" cols="77" placeholder="img_Name..."></textarea>    <br>    
+    <textarea id="Notes" rows="3" cols="90" placeholder="Notes..."></textarea>    <br>
+    <!-- Closed on 27Aug16 forever 
+    tags <textarea id="tags" rows="1" cols="50" placeholder="tags..."></textarea>   -->
+
+
+    <div id="Copy_to_Another_Category" class="tooltip_el">Copy to Category
+        <select id="CategoryName_Select" />  <!-- size="9"  multiple -->
+
+            <option value="IMDB --2">IMDB --2</option>
+            <option value="IMDB Sel Tabs (sets)">IMDB Sel Tabs (sets)</option>
+            <option value="celebwall Index">celebwall Index</option>
+            <option value="celebwallpaper.org 23May16 Index only">celebwallpaper.org 23May16 Index only</option>
+            <option value="SantaBanta">SantaBanta</option>
+            <option value="cugiz">cugiz</option>    
+            <option value="Imogen">Imogen</option>
+            <option value="youtube to see & download">youtube to see & download</option>
+            <option value="youtube good\useful Tabs">youtube good\useful Tabs</option>
+            <option value="youtube download pending!!, passed">youtube download pending!!, passed</option>
+            <!-- See, this pen for  .value of ta & select, also in case \-backslash is there in string
+            https://codepen.io/sahni4you/pen/mmJRNO -->
+            <option value="finals">finals</option>  
+
+            <option value="divider_only">-- tech ones below: --</option>
+
+            <option value="w3Schools_Imp_test1">w3Schools_Imp_test1</option>    
+            <option value="Codepen">Codepen</option>
+            <option value="jQuery Methods">jQuery Methods</option>
+            <option value="Array Methods">Array Methods</option>    
+            <option value="Sitepoint">Sitepoint</option>
+            <option value="HTML Dom NodeList">HTML Dom NodeList</option>
+            <option value="img Related">img Related</option>
+
+            <option value="divider_only">-- testing--checking ones: --</option>
+    
+            <option value="checko_delete">checko_delete</option>
+            <option value="ghghggkgkg" selected>ghghggkgkg</option>
+            <!-- Imp!!:  keep the above as selected, so that if you mistakenly, press, 'Copy\Move'  btn, .... -->
+                    <!-- <option value="volvo" selected>Volvo is a Car</option>      Selected on html-load -->
+
+        </select>
+
+        <button id="Copy_current_dial">Copy<br>item</button> <!-- js__tooltip -->
+        <button id="Move_current_dial">Move<br>item</button> <!-- js__tooltip -->
+
+        <div id="Current_CatName">Current CatName:<span>Codepen as example</span></div> 
+
+        <!-- the below tooltip, is applied-to  'div#Copy_to_Another_Category'
+        it was to be on 'button#Move_current_dial', but that is disabled onclick, so applied to containing-div.   -->
+        <span class="mytooltip show_up_at_top arrow_bottom myconfig_10">empty</span>
+    </div>
+
+          
+    <div id="Delete_confirmation_btns">
+        <textarea id="date" rows="1" cols="8" placeholder="date..."></textarea>
+            <button id="Edit_cancel_btn">Cancel</button>    &nbsp;&nbsp;
+            <button id="Edit_Modify_btn">Modify</button>
+            <span id="Edit_Modify_btn__modified">done -- Modified</span>
+
+            <!-- <span id="Reload_this_ext_page_to_Modify_another_Dial"></span>  This old Method closed , css update pending -->
+
+    <button id="delete_Multiple_dials">delete Multiple dials</button>
+
+    <div id="div__delete_Multiple_dials">
+        <div id="how_to_write_dial_Nos__info">
+            Enter the pos of Dials, separated by commas... like:<br>
+            25,26,35,42<br>
+            Or Enter like 37--43 &nbsp;&nbsp;(37,43 including)
+        </div>
+        <textarea id="delete_Multiple_dials__textarea" rows="1" cols="45" 
+            placeholder="Enter the pos of Dials, separated by commas...
+            Or Enter like 37--43"></textarea>
+    </div>
+
+    </div>
+
+
+</div>  <!-- End of  <div id="Edit_Dial_dialog_box"> -->
+
+
+
+
+<div id="CategoryNames_div_on_left_side">
+  <ul id="ul_CategoryNames_1"></ul>
+</div>
+
+<div id="main_container_div">
+    <div id="main_container_ka_sub_div_1" class="main_container_ke_sub_divs">
+        <a id="href_1" class="href_for_sub_divs" href="http://www.google.co.in">
+        <img id="img_1" class="img_in_sub_divs" src="images/architectural-245a.jpg" title="images\architectural-245a.jpg
+        tomato">        </a>
+        <div id="title_1" class="bMark_SpeedDial_title">Page Events on w3schools </div>
+        <div id="tag_1" class="tags">tags, jQuery, mypics </div>
+        <div id="desc_Notes_1" class="slide_up_divs__desc_Notes">Some Notes or desc, see how these will be seen. Some more lines for space-test, how the space will show-up.</div>
+  </div>
+
+    <div id="main_container_ka_sub_div_2" class="main_container_ke_sub_divs">
+        <a id="href_2" class="href_for_sub_divs" href="http://www.snapfiles.com">
+        <img id="img_2" class="img_in_sub_divs" src="images/architectural-246a.jpg" title="images\architectural-246a.jpg
+        tomato">        </a>
+        <div id="title_2" class="bMark_SpeedDial_title">snapfiles.com Homepage </div>
+        <div id="tag_2" class="tags">tags, jQuery, mypics </div>
+        <div id="desc_Notes_2" class="slide_up_divs__desc_Notes">Some Notes or desc, No--2</div>
+  </div>
+
+  <div id="main_container_ka_sub_div_3" class="main_container_ke_sub_divs">
+    <a id="href_3" class="href_for_sub_divs" href="http://www.jqueryui.com">
+        <img id="img_3" class="img_in_sub_divs" src="images/architectural-249a.jpg" title="images\architectural-249a.jpg
+        tomato">        </a>
+        <div id="title_3" class="bMark_SpeedDial_title">jqueryui.com Homepage </div>
+        <div id="tag_3" class="tags">tags, jQuery, mypics </div>
+        <div id="desc_Notes_3" class="slide_up_divs__desc_Notes">Some Notes or desc, #3</div>
+  </div>
+
+</div>
+
+<div id="float_canceller" style="clear: both"></div>
+
+
+
+
+
+
+<!-- this contextmenu Added on 23March17 . this will run on tags, which were not being used. -->
+<div id="contextmenu">
+    <div id="saved_on_google_drive">save on google drive</div>
+</div>
+
+
+
+<!-- HTML details Tag
+     http://www.w3schools.com/tags/tag_details.asp
+-->
+<details id="pending_Dos_Ideas">
+    <summary>pending!! on this Category</summary>
+<pre>
+1.) chrome://bookmarks/#2210
+    pending sessions folder mein :--
+    Eva green Wallpapers, 3-4 wallpaper websites to search, 16Nov16
+
+</pre>    
+</details>
+
+
+<pre id="What_more_needs_to_be_done__IDEAS">
+1.)  Change the position of an bMark (id) to say topMost or 5th from Top.
+        Numeric input needs to be applied here. or simple Input will be equally good.
+        Instead of dragging, this needs to be used. Sometimes the list is long means
+        bMarks in a folder are many & Some need to be positioned, then this can be useful.
+
+2.)  SerializeArray() jQuery + data()  Methods, if these can be useful.
+
+</pre>
+
+
+
+
+    <script src="Main_SpeedDial_page.js"></script><!-- No inline script allowed so JS in this file -->
+    <script src="arr_Sorted -- Chrome Console -- Code for sorting arr and then Saving in localStorage, 4Sep16.js"></script>
+    <script src="straighten_Nos.js"></script>
+    <script src="Move_Dial_pos_up_dn.js"></script>
+
+
+</body>
+</html>

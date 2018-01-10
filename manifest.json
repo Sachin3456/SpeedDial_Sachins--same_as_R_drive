@@ -1,0 +1,86 @@
+{
+  "name": "SpeedDial_Sachins__v1.0",
+  "version": "1.0",
+  "description": "Sachins SpeedDial, with Screenshots, Notes, Categories & tags.",
+  "icons": {
+        "16": "icon.png",
+        "48": "icon48.png"
+  },
+
+  "options_page": "options.html",
+
+  "permissions": [
+    "bookmarks", "tabs", "storage",
+    "<all_urls>", "activeTab",
+    "unlimitedStorage", "downloads"
+       
+  ],
+  "browser_action": {
+      "default_title": "SpeedDial_Sac_ver1",
+      "default_icon": "icon.png",
+      "default_popup": "popup.html"
+  },
+
+  "background": { "scripts": [ "background.js" ], "persistent": false  },
+
+  "content_scripts": [
+        {
+            "matches": ["<all_urls>"],
+                                          /* "css": ["lib/jquery-ui.css"], Note: this successfully injects the .css, but ui--icons are not available
+                                          thru this method of injection. So, I injected this tabs_executeScript.js(content.js)
+                                          thru this method icons, see\look-for icons in the web-url of page-itself, like
+                                          http://www.w3schools.com/jsref/images/ui-icons_222222_256x240.png
+                                          & icons are not available on w3schools--server      */
+            "css": [ "css/sac_tooltip__for_tabsExecute_Codepen_ZJRBQN.css" ],
+            "js": ["lib/jquery-2.1.4.js", "lib/jquery-ui.js"],    /* , , "content_script.js" */
+            "run_at": "document_start"
+        }
+  ],
+  "web_accessible_resources": [ "css/tabs_executeScript.css", "lib/jquery-ui.css", /* this closed & injected thru content-script injection method  "css/sac_tooltip__for_tabsExecute_Codepen_ZJRBQN.css",*/
+                                "lib/images/*.png",
+                                "template_html_for_content_script.html"
+                                /* "lib/jquery-2.1.4.js"  just including this does not make jQuery available in tabs_executeScript\content_script. appendChild needs to be done */
+
+  ],   /* Note: this line of web_access... is Imp!, otherwise throws\shows error on the page(F12 console mein):- 
+
+        Denying load of 'css-file-path'. Resources must be listed in the web_accessible_resources manifest key in order to be loaded by pages outside the extension.
+        */
+
+  "manifest_version": 2,
+  "content_security_policy": "script-src 'self' https://ajax.googleapis.com; object-src 'self'"
+}
+
+
+/* chrome.tabs.executeScript.js Added on 24Jan17 
+Note: It was working ok, but only PureJS.
+  For Adding jQuery to it, I Added  
+  "content_scripts": [
+    {"matches": ["<all_urls>"],
+      "js": ["lib/jquery-2.1.4.js"],
+      "run_at": "document_start"
+    }
+  ]
+
+& jQuery started working in tabs_executeScript.js--file  
+
+*/
+
+
+/* 4 Jan17 -- started keeping some explanation of manifest.json  
+
+the 'activeTab' permission to see the URL of the current tab.
+Getting Started: Building a Chrome Extension - Google Chrome
+https://developer.chrome.com/extensions/getstarted
+
+the above page has a sample popup.html, popup.js, manifest.json & icon.png
+to start a very-basic popup--extension.
+
+From popup.js on above page-link,
+    tab.url is only available if the "activeTab" permission is declared.
+    If you want to see the URL of other tabs (e.g. after removing active:true
+    from |queryInfo|), then the "tabs" permission is required to see their
+    "url" properties.
+
+"storage" --> localStorage permission    
+
+*/

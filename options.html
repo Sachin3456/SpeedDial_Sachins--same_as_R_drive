@@ -1,0 +1,204 @@
+<!doctype html><html><head>
+    <link rel="Stylesheet" href="css/options.css">
+
+    <script src="lib/jquery-2.1.4.js"></script>
+    <link rel="Stylesheet" href="lib/jquery-ui.css">
+    <script src="lib/jquery-ui.js"></script>
+
+    <script src="lib/jquery.multisortable.js"></script>  <!-- Added on 23June16 -->
+<style></style>
+</head>
+<body>
+
+
+    
+<div id="options_container_1">
+    <input type="text" id="input_add_Category">
+    <button id="add_Category" class="btn_Save" disabled="true">Add_Category </button>
+    this btn Diasabled using disabled--attr--true, by me on 9June16.
+    
+</div>  <!-- End of id__options_container_1 -->
+
+
+
+
+
+<div id="options_container_2">    <!--  Started on 9June16  -->
+
+<div id="div13">
+
+</div><hr>
+
+<div id="div14">
+    <textarea id="ta_Category_GroupName" cols="40" rows="1" placeholder="Add Category--Group Name to Save"></textarea>
+    <button id="Save_Category_GroupName_btn14">Save it -- to lStorage</button>
+    <div id="div14_2">Saved.<br>Now, Reload this page (F5)</div>
+    <span id="div14_1">0</span>
+    <span>chkboxes checked</span>
+    <!-- the below btn closed, remove it later.  8Feb17  -->
+    <button id="how_many_checked_btn14">how many checked</button>
+
+</div><hr>
+
+<div id="div14_A">
+    <div id="div14_A_1">
+        <input type="checkbox" id="show__Categories_not_found__in_popup" >
+        <label for="show__Categories_not_found__in_popup">show <span>Categories_not_found</span> in_popup </label>
+        <br>
+    </div>
+</div><hr>
+
+<div id="div15">
+    <h4 id="h4_in_div15__1" class="h4_Cat_GroupName">-- Saved Groups -- <span>Group-count --</span></h4>
+    <h4 id="All_Active_Categories_count">Count of All Active Categories<span></span></h4>
+    <button id="Save_Active_Groups">Save Active Groups</button>
+    <div id="Saved_Active_Groups_msg_show__div15_4">Saved.<br>Active Groups in ls </div>
+    <button id="delete_Group">delete Group</button>
+    <button id="delete_Groups___checked_ones" disabled="true">delete checked</button>
+    <div id="div15_3_deleted__Reload">Deleted.<br>Now, Reload this page (F5)</div>
+    <div id="div15_2"></div>
+    <div id="div15_2_float_clr"></div>  <!-- in css float: left; -->
+
+</div>
+
+<hr><hr>
+<div id="div16">
+    <ul id="ul_CategoryNames_options_page"></ul>
+
+    <textarea id="ul_CategoryNames_Sortable_update"></textarea>
+
+    <button id="Save_ul_li">Save ul li <br>-- to lStorage</button>
+
+    <div id="div16_ul_Saved">Saved.<br>Now, Reload this page (F5)</div>
+
+</div>
+
+<hr><hr>
+<div id="div17">
+
+    <button id="Save_Backup_lStorage_thru_ta">Save\Backup &nbsp;-- lStorage &nbsp;-- thru textarea</button>
+    <button id="show_lStorage_size">show_lStorage_size();</button>
+    put  bootstrap btn, copy from ext. 'copy Tab' -- copies tab url+title
+</div>    
+
+</div>  <!-- End of id__options_container_1 -->     
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+        <pre id="What_more_needs_to_be_done__IDEAS" style="line-height: 1.5; color: #333;
+                                                                                                 font: 16px monospace, Consolas, Calibri;">
+
+                2nd bMark Ext. IDEA ------>>>>
+1.)  23March16 -- my 2nd bMark Ext - Hover over a link & you will get an overlay popup
+                telling you whether in bMarks or Not. This will be enable, only after clicking
+                its Ext--btn. like your drag-to-save Ext. for this to be effective & fast, you
+                will have to load selected\All folders in an array, which will be fastly-looped
+                in no-time, to give you hover-results. Also, if possible, bmark right from there,
+                with & without overlay-options. The overlay will be like 'Save-pic' Ext. that I
+                have stopped using, that gives options to Save pic, in different folders.
+                ------------------------->>>>
+
+1.)  Change the position of an bMark (id) to say topMost or 5th from Top.
+        Numeric input needs to be applied here. or simple Input will be equally good.
+        Instead of dragging, this needs to be used. Sometimes the list is long means
+        bMarks in a folder are many & Some need to be positioned, then this can be useful.
+
+2.)  SerializeArray() jQuery + data()  Methods, if these can be useful.
+3.)  Use form--tag may be useful.  
+
+                From options--page, transferred here.
+    1. Make it first search all & report, where-where present.
+    2. The choice of fixed folder -- Make checkboxes first. Max 5.
+       One will load-checked. for starting.
+       Then options page, which will show-&-save, which & how many will be checked. 
+
+
+26Feb16   ---   Ideas while browsing youtube -- Feriha & others
+last bookmarked folder, as in chrome
+
+change the position of Added & make it fixed. if reqd. -- check
+
+Imp!-- if no checkbox is selected, msg, no checked & bmark should not happen.
+
+body width in options -- not to give, will adjust in popup.html -- later, Add in Ideas
+
+js mein, the ones which are checked. -- their bg changed to light Green + a tick Added
+this will be thru jQuery .css({}) & .after -- find a tick identity. or try a picture, 
+the picture-tick will be appended, the picture, will be in folder.
+Do not keep picture after each input as hidden -- or -- think about it.
+
+Imp! -- the bMarked, with changed title, Now, changed one does not come-up
+
+recent 3-5 , at the end of popup -- folded, remember position. Easy thru localStorage
+only thru this extension will be available. OK.
+
+textbox title wala, should turn to 2nd line, after one finishes
+if easy no. of charcters, at top-right
+
+one-click mode, set the default folder & bmark, with popup
+
+if the bookmark is present, change icon to Green, background.js - 
+
+try sortable -- note down & think later, in options.html
+
+checkboxes at right-side, will be ticked, automatically, the next time
+
+input box mein entered no. will be automatically, loaded from localStorage.
+
+make a options - gear button at top-right.             
+        </pre>
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+        <h2>Keyboad Shortcut</h2>
+        <p>By default, Chrome does not come with a keyboard shortcut to open Bookmark Manager. Regardless of the reason for this, it is understandable that some would like this feature present. Fortunately, as of Chrome v22.x, it is now possible to set up keyboard shortcuts to trigger extensions, which means with this extension a keyboard shortcut can be created to open the Bookmark Manager. Here's how:</p>
+        <ol id="keyboardShortcuts">
+            <li>
+                <p>Copy and paste the following URL into the address bar/omnibox: <strong>chrome://chrome/extensions/</strong> (Options > Tools > Extensions).</p>
+            </li>
+            <li>
+                <p>Scroll to the very bottom of the page and click the link "Configure Commands".</p>
+                <img src="" width="600" height="146" />
+            </li>
+            <li>
+                <p>When the list appears, next to "Open Bookmark Manager" enter your desired keyboard shortcut. A favourite, commonly used in other browsers, is Ctrl+B.</p>
+                <img src="" width="600" height="162" />
+            </li>
+            <li>
+                <p>Hit OK and that's it! Best of all, using your shortcut key will also load your specified bookmarks folder, just like clicking the icon.</p>
+            </li>
+        </ol>
+
+
+
+
+    <script src="options.js"></script><!-- No inline script allowed so JS in this file -->
+    <script src="Backup_lStorage_thru_textarea.js"></script>
+    <!-- Added below, on 29March17 -->
+    <script src="lStorage -- size, in sortable table & sorted on size arr.js"></script>
+    <!-- <script src="screenlog.js"></script> -->
+
+</body>
+</html>

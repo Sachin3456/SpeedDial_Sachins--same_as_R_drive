@@ -1,0 +1,372 @@
+<html>
+<head>
+  <script src="lib/jquery-2.1.4.js"></script>
+  <link rel="Stylesheet" href="lib/jquery-ui.css" />
+  <script src="lib/jquery-ui.js"></script>
+  
+  <link rel="Stylesheet" href="css/btn_CSS_only.css" />
+  <!-- Added sac_tooltip here on 14Sep17
+  Note: the css--file, here is named as  'for_tabsExecute'
+        because I first Added it for  tabsExecute_screenshooter
+        but today, Added to popup.html, also, but did not change the name.
+        It is Added thru manifest.json, for  tabsExecute   -->
+  <link rel="Stylesheet" href="css\sac_tooltip__for_tabsExecute_Codepen_ZJRBQN.css">
+  <link rel="Stylesheet" href="css/btn_Sac__only.css" />
+
+  <link rel="Stylesheet" href="css/popup.css" />
+  
+  <!-- <script src="options.js"></script>   -->
+  <style></style>
+</head>
+<body>
+                            <!-- oninput Event in TextArea can be used http://www.w3schools.com/jsref/event_oninput.asp  -->
+<div id="Add_bMark">
+    <div id="textarea_1__character_count">
+        <div id="textarea_1__character_count_1">700S</div>
+        <div id="textarea_1__character_count_2"></div>
+        <div id="textarea_1__character_count_3_Clear_float"></div>
+    </div>
+
+    <div id="div_container_for_chkbox__Save_textarea_1__or__not">
+        <input type="checkbox" id="Save_textarea_1__or__not" > 
+        <label for="Save_textarea_1__or__not" id="label_Save_textarea_1__or__not">lStorage    </label>
+    </div>
+
+    <div id="title_from_Cat_arr__container">
+        <div id="div__title_from_lStorage_arr" contenteditable="true"></div>
+    </div>
+
+    <!-- HTML textarea autofocus Attribute
+         http://www.w3schools.com/tags/att_textarea_autofocus.asp  -->
+    <textarea id="textarea_1" rows="1" tabindex="1" autofocus></textarea>                       <!-- style="font-weight:bold; -->
+    <textarea id="textarea_2" rows="1" tabindex="2"></textarea>                       <br>
+
+        <!-- the below tooltip is placed\shown using $.offset() Method
+        absolutely-positioned, display: none; -->
+    <div id="tooltip_for_textarea_1">js tooltip for textarea_1</div>
+
+    <div id="Added">Added!</div>
+    <div id="not_Added">No checkbox selected!<br>Nothing bMarked!!</div>
+
+</div>
+
+<div id="Add_bMark_btns">
+    <span id="count_of_bMarked"></span>
+    <button id="btn9" tabindex="7">
+        <span class="span_btn8" tabindex="3">Add bMark</span>
+    </button>
+
+    <span id="btn9_mein_span"></span>
+    
+    <button id="btn8"><span class="span_btn8">Add bMark</span></button>
+    <input id="changing_bMark_id" value="46" style="margin: 0 0 0 0px;width: 50px; height: 25px; font: bold 18px Consolas; color: #333;" />
+    <input type="checkbox" id="ch_box_1_Remember_last_input" value="440"> 
+</div>  
+
+
+<div id="Select_and_two_textarea">
+
+    <!-- li are added to this ul, dynamically\programtically -->
+    <ul id="ul_CategoryNames"></ul>
+
+    <button id="searchfilter_li">S</button>     <!-- search\filter_li -->
+    <div id="filter_input_container">
+        <input id="filter_input__for_ul_0" type="text" placeholder="search" autofocus></input>
+        <span id="no_of_li_found0"></span>
+    </div>
+
+    <div id="selected_li_count">77</div>
+    <button id="Edit_Dial">E</button>
+
+    <div id="copyTo_Another_Category">
+        <select id="CategoryName_Select" />  <!-- size="9"  multiple -->
+
+            <option value="IMDB --2">IMDB --2</option>
+            <option value="IMDB Sel Tabs (sets)" selected>IMDB Sel Tabs (sets)</option>
+            <option value="celebwall Index">celebwall Index</option>
+            <option value="celebwallpaper.org 23May16 Index only">celebwallpaper.org 23May16 Index only</option>
+            <option value="SantaBanta">SantaBanta</option>
+            <option value="cugiz">cugiz</option>    
+            <option value="Imogen">Imogen</option>
+            <option value="youtube to see & download">youtube to see & download</option>
+            <option value="finals">finals</option>  
+
+            <option value="divider_only">-- tech ones below: --</option>
+
+            <option value="w3Schools_Imp_test1">w3Schools_Imp_test1</option>    
+            <option value="Codepen">Codepen</option>
+            <option value="jQuery Methods">jQuery Methods</option>
+            <option value="Array Methods">Array Methods</option>    
+            <option value="Sitepoint">Sitepoint</option>
+            <option value="HTML Dom NodeList">HTML Dom NodeList</option>
+            <option value="img Related">img Related</option>
+
+            <option value="divider_only">-- testing--checking ones: --</option>
+    
+            <option value="checko_delete">checko_delete</option>
+            <option value="ghghggkgkg">ghghggkgkg</option>
+            <!-- <option value="volvo" selected>Volvo is a Car</option>      Selected on html-load -->
+
+    </select>
+        
+    </div>
+
+    <!--  onmouseup='this.select()'  gives error in console, about some self-source policy, So, putting this .js  -->
+    <textarea id="img_Name" rows="1" placeholder="imgName..." tabindex="5"></textarea>    <br> <!-- cols="60" Closed on 10Oct16, will use width instead  -->
+    <textarea id="Notes" rows="1"  placeholder="Notes..." tabindex="6"></textarea>
+    <button id="Empty_Notes">R</button>  <!-- R is for reset -->
+    <button id="Empty_ta_img_Name">R</button>  <!-- R is for reset -->
+
+    <div id="Edit_info">
+        <span id="Edit_info_1"></span>
+        <button id="Cancel_Editing">x</button>
+        <button id="to__ta_123" class="ta_arrow_btns">.</button>
+    </div>
+    <textarea id="Edit_in_popup__textarea_1" rows="1"></textarea>
+    <button id="to__ta_1" class="ta_arrow_btns">.</button>  <!-- &Uarr; -->  
+
+    <div id="read_only">
+        <div id="read_only_1">Edit imgName is Optional. &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; If you edit, this CaseV will become CaseVII</div> <!-- this is used in CaseV -->
+        <div id="read_only_2"></div>  <!-- _2 ka content is dynamic -->
+
+        <div id="imgName_edit__CaseV">
+            <input id="inp_chkbox_1_imgName" type="checkbox">
+            <label for="inp_chkbox_1_imgName">first check a radio &amp; then this chkbox.</label>
+
+            <div id="info__CaseV">If chkbox is not checked, imgNames will remain the same. <br>
+            Just edit title or Notes, &amp; Save</div>
+
+            <div id="tooltip_for_CaseV" class="arrow_at_bottom">this imgName will be written to all dials.</div>
+        </div>
+
+        <div id="read_only_3"></div>
+    </div>
+
+    <textarea id="Edit_in_popup__imgName" rows="1"></textarea>
+    <button id="to__ta_2" class="ta_arrow_btns">.</button>  <!-- &Uarr; -->
+
+    <textarea id="Edit_in_popup__Notes"></textarea>  <!-- rows are 2, by-Default -->
+    <button id="to__ta_3" class="ta_arrow_btns">.</button>  <!-- &Uarr; -->      
+
+    <div id="msg_All_same">All same, no modification Done!!<br>Either modify or press x-cancel</div>
+
+
+    <!-- selected Categories are shown here -->
+    <div id="Names_of_Categories_selected_in_ul_1">
+        <ul id="ul_2__Selected_Cat_List"></ul>       <!-- function li_s_selected__ka_text(); adds li to this #ul_2   ===This func is fired on li-click & popup__Load, 
+        thru
+        func Load_All_Categories_Into_ul_CategoryNames();   & 
+        func Load_Settings();                                   resp.  (10Oct16) 
+
+        How To Create a To Do List
+        http://www.w3schools.com/howto/howto_js_todolist.asp
+        thru above webpage, 'Close'x  btn is appended to li         -->
+    </div>
+    <div id="msg">no li selected, you must select 1 for Add_bMark().
+        <span>x</span>
+    </div>
+
+
+    <!-- the below div has a separate js__file:
+         'popup_Extended_2_clipboard.js'   -->
+    <div id="Clipboard_div_container">
+        <button id="prepend__txt_to_ta__1" title="&#010;-------------&#010;prepend to title &#010;in textarea_1">P</button>   <!-- \n\n did not work.   \n works in variables, in var &#10; does not work.
+        &#013;&#010; together also works.  but as only &#010;  works, i kept only &#010;   -->
+
+        <button id="prepend__txt_to_ta__2" title="&#010;-------------&#010;prepend to title &#010;in textarea_1">P2</button>
+
+        <input type="checkbox" id="chkbox_Clipboard" > 
+        <label for="chkbox_Clipboard" id="chkbox_Clipboard_ka_label"></label>
+        <button id="btn_Clipboard_3" title="not yet chalu kiya, thru js">A</button>
+        
+    </div>
+    <div id="copy_paste_ta_container">
+        <textarea id="copy_paste_Edit"></textarea>
+        <textarea id="copy_paste_Edit_1"></textarea>
+        <textarea id="copy_paste_Edit_2"></textarea>
+        <div id="copy_paste_btn_container">
+            <span id="Saved_msg1">Saved</span>
+            <button id="Save_to_lS">Save_to_lS</button>
+            <button id="hide_ta_div" title="close this whole box">x</button>
+        </div>
+    </div>
+
+
+                                  <!-- http://codepen.io/sahni4you/pen/ZWmpRe  -->
+    <div id="div_chkbox_png_or_jpg__reset_btn"> 
+        <div id="quick_imgName_for_youtube">
+            <div id="append__only_ytb_address" class="tooltip_el">
+                <input type="checkbox" id="only_ytb_address">
+                <label for="only_ytb_address" id="only_ytb_address_ka_label">Q</label>
+                <div id="ttip_1" class="sac_tooltip show_up_at_top arrow_bottom">quick_append<br>(only ytb--address)</div>
+            </div>
+
+            <div id="quick_and_take_scr">
+                <input type="checkbox" id="Q_and_take_scr__thru_tabsExecute">
+                <label for="Q_and_take_scr__thru_tabsExecute" id="Q_Take_scr" class="tooltip_el">Q_T</label>
+            </div>
+        </div>
+        <!-- <input type="checkbox" id="detail_Edit_in_Tab">
+        the below input was this till 1Sep17, when I gave it other proper id. It was started for some other purpose, then today, I changed the id
+        id changed in  'popup_Ext_1.js'  also.  only here, the id was used.  -->
+        <input type="checkbox" id="take_scr__thru_tabsExecute">
+        <label for="take_scr__thru_tabsExecute" id="label_for__take_scr__thru_tabsExecute">T</label>
+
+        <input type="checkbox" id="append_ytb_address">
+        <label for="append_ytb_address" id="append_ytb_address_ka_label">A</label>
+
+        <button id="btn_Save_4_textarea_s">Save</button>
+
+        <!-- 2 inputs, below, Closed on 10Oct16 
+        <input type="radio" id="radio_btn_png" value="png" checked="checked" name="r1">
+           <label for="radio_btn_1" id="label_radio_btn_1">.png    </label>
+
+        <input type="radio" id="radio_btn_jpg" value="jpg" name="r1"> 
+          <label for="radio_btn_2" id="label_radio_btn_2">.jpg   </label>
+        -->
+
+        <button id="btn_Reset_textareas">Reset</button>
+        <button id="btn_CopyTo_category">CopyTo</button>
+        <div id="Saved_msg">Saved</div>
+    </div>
+
+
+    <div id="Show_SpeedDial_page_btn_container">
+        <button id="btn_Show_SpeedDial_page" tabindex="4">SpeedDial<br>page</button>
+        <div id="SDial_menu_hover">
+            <div id="SDial_menu_container">
+                <textarea id="filter_ta__for_ul" rows="1"></textarea>
+                <span id="no_of_li_found"></span>
+                        <!-- li are added to this ul, dynamically\programtically -->
+                <ul id="ul_CategoryNames_clone"></ul>
+            </div>
+        </div>
+
+        
+    </div>
+
+
+
+    <!-- the Category(s) in which bmarked - are Added here dynamically, See in #btn9.click  in popup.js  -->
+    <div id="result">
+        <div id="result__1"></div>
+        <div id="close_result">x</div>
+    </div>
+
+
+    <!-- This not being used, as Chrome__bMarks ka Code, not yet Added -->
+    <div id="container_No_of_bMarks">
+        <div id="No_of_bMarks"></div>
+        <div id="No_of_bMarks_fol"></div>
+    </div>
+
+
+    <textarea id="date_today" rows="1" placeholder="input Date..."></textarea>
+</div>    <!-- End of  div#Select_and_two_textarea  -->
+
+
+
+
+<div id="two_textarea_s">   <!-- absolutely positioned, this div is empty(), on 10Oct16, can be removed -->
+
+<!-- tags Closed forever, on 27Aug16
+<textarea id="tags" rows="1" cols="35" placeholder="tags..."></textarea>
+<button id="Empty_tags">R</button>  //R is for reset 
+-->
+</div>
+
+    <!-- the div below, shows search results, thru onPopup();  functions.
+    This is the only-div, which is used to show search-results.  
+    Most of the content\text\img are dynamically Added.  -->
+<div id="div_4">
+    <!-- 'div_4_0'  is only for img. It has nothing to do with search-results.
+    only display: block;  on 'Add_dial'   else it has no other usage. -->
+    <div id="div_4_0">
+        <img id="show_img_on_Add_Dial">   <!-- src given by popup.js, thru func Add_Dial() & in it func show_img_on_Dial_Added()  -->
+    </div>
+
+    <!-- this is the main-div, in which search results are Added, thru func onPopup();  -->
+    <div id="div_4_1">
+        
+    </div> 
+
+    <!-- the div below shows the scr-images associated, with search results.
+    this div is associated with above  'div_4_1'  -->
+    <div id="div_pic_show">
+        <div id='All_same__pic'>All<br>same</div>  <!-- position: absolute; display: none; -->
+        <img src="" class="pic_show_1">
+    </div>
+
+    <!-- this shows up only when search-results are 0.  not found in say 50 categories.
+    function res_arr_not_found__loop_run__how_to_show();
+    content\text is Added thru func  -->
+    <div id="div_4_2"></div>
+
+    <div id="div_4_4"></div>    <!-- float clearing only -->
+
+</div>  <!-- End of id__div_4  --> 
+
+
+<div id="div_5">
+    <!-- <label for="filter__not_found" id="filter__not_found_ka_label"></label>  -->
+    <input type="text" id="filter__not_found" /> 
+    <button id="btn_check">check</button>
+</div>  <!-- End of id__div_5  --> 
+
+
+<div id="result_1">
+  div id-result_1
+</div> 
+
+
+
+  <div id="what_does_not_work">   <!-- A simple Anchor link -->
+      <a href="http://google.co.in">Google</a>
+      <button id="btn_Recent_bMarks">Recent bMarks</button>
+      
+  </div>
+
+            <!-- The idea about its separate Tab is in Copy. Take 2-3 days in continuation & Complete it. -->
+  <div id="Recent_bMarks">
+    
+  </div>
+
+
+<div id="bookmarks" tabindex="-1">This is the div with (id--bookmarks)  <br>
+        <button id="btn1">Google</button>
+        <button id="btn2">bMarks#46</button>
+        <button id="btn3">#96 Articles that helped...</button>              <br>
+        <button id="btn4">btn4 -- bMark Create</button>
+        <button id="btn5">btn5 -- bMark Create 2 Current</button>
+        <button id="btn6">btn6 -- get Current Tab</button>
+        <button id="btn7">btn7 -- get Current Tab</button>      <br>
+</div>  
+
+
+<div id="make_it_Cat_VII__Editing_func_mein">
+    <!-- the below inputs are appended by  func Edit_Category_Dial();
+    they otherwise are not used.  just kept in popup.hml to be appended by popup.js -->
+    
+    <input id="inp_chkbox_2_title" type="checkbox">
+</div>
+
+
+
+<div id="open_downloads_folder" title="Open chrome downloads_folder, in Windows-explorer">&RightArrowBar;</div>
+<div id="open_chrome_downloads">&circledast;
+    <div id="tooltip_for_id__open_chrome_downloads">
+        <b>set &nbsp;&nbsp;'chrome downloads folder' </b><br><br>
+        chrome://settings/search#download <br>
+        Opens the above address (in a Tab) <br>
+    </div>
+</div>
+<div id="close_popup" title="close popup">x</div>
+
+
+<script src="popup.js"></script>
+<script src="popup_Ext_1.js"></script>
+<script src="popup_Extended_2_clipboard.js"></script>
+<script src="popup_Ext_3_small_funcs.js"></script>
+<!-- <script src="popup__Search.js"></script> -->
+</body>
+</html>
