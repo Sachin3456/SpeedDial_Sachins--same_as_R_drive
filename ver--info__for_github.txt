@@ -1,0 +1,96 @@
+ver60 -- 14Sep16
+Main SpeedDial_page 'Add Category' div changes.
+
+ver73 -- 10Oct16   ( Imp!! -- as many new chnages made, in popup.html & .js )
+div#Select_and_two_textarea -- mein All absolute--position wale el -- placed again.
+popup.js -- changed so that their -- css-shifting, should stop, from Now-on, as now they are absolute in
+div#Select_and_two_textarea, instead-of  in "body".  Their parent()  changed.
+#ul_2, for showing  selected Categories,  also added,   Close(x)--btn on these li, yet to Add.
+Editing in popup ke liye div Added, + func also to operate it.
+
+ver77, 29Jan17, without images--folder, today@10,51am
+Message Passing + scr -- Added for the first-time. fully working, but scr works when chrome F12 is done.
+tabs_executeScript.js
+
+ver77_2, 1Feb17, without images--folder, today@1,29pm  
+this backup has full functionality.  (upgrade has nothing to do with its working.)
+Message Passing + s_shot  thru  tabs_executeScript--content_script, fully working. 
+crop also, works thru content_script, still upgrading\refining it.
+For an example of basic working of  "Message Passing + s_shot",  this ver is quite good, because
+I will be adding much.  this ver takes s_shot thru popup.html,  which I may be removing in next versions.
+
+ver77_4, 3Feb17, wout images--folder, @1,33am  
+just after this backup,  "template_html_for_content_script.html",  Added.  So, this backup contains html_txt
+thru a string.  Now,  from the next backup\step-in-making,  $.get is used to get html_txt,  from a separate html-file.
+Also, in the minifest.json,  this template is added as 'web_accessible_resource'.
+
+SpeedDial_Sac - copy, ver77_7, 19Feb17, wout images--flder, @2,11pm - Imp!!  
+till (including)\in-this ver,  s_shot was being taken from popup.html. After taking this backup, I have closed 
+this procedure. In this ver, #div43 was added by tabs_executeScript.js, but with a s_shot, from popup itself.
+Now on, only #div43 is added thru tabs_executeScript.js & scr is only taken, from background.js thru MPassing.
+So, this version, can sometime, be used, in case, a scr needs to be taken from popup.html & then thru MPassing
+passed to contentScript.
+Just, for info, in the next backup, I have added many functionalities, only in tabs_executeScript.js
+From next backup, the working will be a lot different.
+
+ver80
+till ver80 there was 1 youtube passed   Category. Here, the ram usage shown is not believable. 
+Santa has almost 600 dials --> 	        Memory	       PID	                Image Cache                 CSS Cache      Javascript memory
+ 
+Celebwall index  900 dials  --> 	
+ 
+youtube pending!! passed 605 dials--> 	
+ 
+youtube good/useful tabs 615 dials
+ 
+
+chrome-extension_dlhdagnphjdpfeiopoafankjhiibijod_0.localstorage --size-->  3.50mb
+So, from here--on ,  I am going to break the Categories into small nos.
+
+
+SpeedDial_Sac - copy, ver83, 11Sep17, wout images, @----pm
+this copy is fully working.  But, as youtube.com  has changed its  style-scope  & I have changed the css
+&  js in Styler  for  zoom__1.2
+This  ext.'s  screenshooter, still needs to be updated.
+Also,  new_opera like automatic  quick_screenshot facilty,  I want to Add,  but that will require a lot of new
+changes &  probaly  inclusion  of  indexeddb database  or  filesytem facility.
+But, this version, is fully backed--up, with images on USB
+&  I am going to post\upload\backup  this ver,  on downlist1@gmail.com  A\c.
+This will also include,  images folder, broken thru  winrar,  in--parts.
+
+SpeedDial_Sac - copy, ver84, 11Jan18, wout images, @5,11pm 
+this copy is fully working.  means this is last_working_version.
+I have done changes in screenshoter, back in Nov & Dec 2018, after youtube.com ki css changed & because
+I had to change the screenshooter.js--wale  ki  .js  also.
+Mainly, these 2 files ==  'tabs_executeScript.js'   &   'template_html_for_content_script.html'
+
+I have not worked on this extension, for a lot of time.  Also was not using this ext. --Ram problem.
+But, now its been 4 months, that I have not taken any backup.  Also, some small changes in css
+or popup.html , may--be,  I would have made during this 4 month period.
+
+Today, when I was creating this v84--backup, I found:  git was installed.  git was Added back in 11Oct17.
+Today  on  11Jan18,  I have taken 1st Commit.
+for git Adding -->to-->1st commit,  see scr & .rtf kept in folder ==  'git_Added_info_folder'
+only some 19 files are there in 1st Commit, not All files & folders.
+localStorage ki only single file backed--up, in folder ==  'localStorage'   (ext. of file  .localStorage)
+Note:  this  'localStorage'  named folder is not in regular SpeedDial_sac folder.  
+Its manually created by me, in backups\last_working_versions.
+
+this v84, I will copy to Cyan--16GB, just after backup.  Check on google-drive, sahni4you also, in Rar--format.
+
+longfile_path---info:
+full_path on R:\--drive ==  'R:\Chrome_Extensions__Making__started_14Jan15\SpeedDial_Sachins'
+using Path_length_Checker StandAlone program ==  198 is max--length.
+When backup folder is Named by above heading, longfileName path ==  238
+Shorten the folderName by just SpeedDial_v84_11jan18  & the path--length will be less, say, 210.
+
+4 folders in SpeedDial_sac are not included ==
+	1)  Backups thru 'Storage Explorer' Ext
+	2)  font-awesome-4_7_0
+	3)  images
+	4)  temp Console results -- screenshots
+
+Note--Imp!! :   my main backup--Source is Cyan--16GB USB stick, which contains, All files & folders + images--folder
+	This backup is made using TreeComp.
+these v84 like backups are just for old_ref.
+temp. day--to--day, small backups, I will now take using git & github.com sync.
